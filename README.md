@@ -32,25 +32,27 @@ This skill produces three files:
 | `DECISIONS.md` | One append-only entry per settled question, with the reason |
 | `HANDOFF_vNN.md` | Written before a context limit — what a fresh session needs now |
 
-Through six phases: **size gate → research → briefing → decision interview →
-plan → build → handoff**, with a quality gate on each.
+A size gate first, then six phases: **research → briefing → decision interview
+→ plan → build → handoff**, with a quality gate on each.
 
 ## Install
 
 **Claude Code / any SKILL.md client**
 
 ```bash
-git clone https://github.com/Dennismit2n/create-masterprompt.git
+git clone --depth 1 https://github.com/Dennismit2n/create-masterprompt.git
 mkdir -p ~/.claude/skills
 cp -r create-masterprompt ~/.claude/skills/
+rm -rf ~/.claude/skills/create-masterprompt/.git
 ```
 
 Project-scoped instead? Copy it to `.claude/skills/` or the cross-client
 `.agents/skills/` in your repo.
 
-**claude.ai** — upload `create-masterprompt.skill` from the releases page, or
-zip the folder yourself. The folder name must stay `create-masterprompt`;
-the frontmatter `name` field has to match it exactly.
+**claude.ai** — upload `create-masterprompt.zip` from the releases page, or zip
+the folder yourself. The archive must have the `create-masterprompt/` folder as
+its root, not the loose files, and the folder name must match the frontmatter
+`name` field exactly.
 
 ## Use
 
@@ -116,7 +118,7 @@ create-masterprompt/
 ├── assets/
 │   ├── template-briefing.md
 │   ├── template-decisions.md
-│   ├── template-uebergabe.md
+│   ├── template-handoff.md
 │   └── template-profile.md
 └── evals/
     └── trigger-evals.json          # 20 queries for description tuning

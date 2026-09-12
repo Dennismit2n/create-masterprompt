@@ -8,7 +8,8 @@ you can observe from the outside, its actual cause, and the fix.
 ### The infinite briefing
 **Symptom:** Three sessions in, `BRIEFING.md` grows every time and nothing is
 built. **Cause:** Planning feels productive and carries no risk of failure.
-**Fix:** Timebox phases 1–4 to one sitting for M, two for L. Then build the
+**Fix:** Timebox everything before the build — research, briefing, decisions,
+and for L the plan — to one sitting for M, two for L. Then build the
 first vertical slice even if the briefing is imperfect — building surfaces gaps
 that no amount of re-reading will.
 

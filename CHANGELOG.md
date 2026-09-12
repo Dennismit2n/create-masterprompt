@@ -1,5 +1,37 @@
 # Changelog
 
+## 1.4.0
+
+- **The M track was self-contradicting.** It listed phases 1, 3, 5 and then asked
+  for a briefing file in the next breath — the briefing is phase 2, the only place
+  that defines the template, the anti-scope section and the assumption register.
+  It also dropped phase 6 entirely, although M is defined as "a few sessions" and
+  the handoff is what makes a second session possible. M now runs phases 1–3 and 5,
+  plus 6 once the work outlives one session. `references/anti-patterns.md` carried
+  a third version of the same answer and has been brought in line.
+- **The handoff template had a German file name** — `template-uebergabe.md` among
+  three English siblings. Renamed to `template-handoff.md`. Phase 6 also hard-coded
+  the German output name `UEBERGABE_vNN.md` while the README promised
+  `HANDOFF_vNN.md`; the artifact table now lists the English names once, and the
+  rule "name them in the user's language" underneath does the rest.
+- **`assets/template-decisions.md` was never referenced** from anywhere, so no agent
+  would ever have loaded it. Phase 3 points at it now. Its placeholders were written
+  as `<angle brackets>` and were being swallowed as HTML tags by Markdown renderers;
+  they are quoted now.
+- **The README promised six phases and then listed seven** by counting the size gate
+  as one. The gate is a gate.
+- **The install instructions copied `.git` into the skills folder** — 43 files instead
+  of 15. Shallow clone plus an explicit removal.
+- **`.skill` is not a real extension.** Neither the Agent Skills specification nor
+  Anthropic's documentation defines one; claude.ai takes a zip. The release asset and
+  the README say `.zip` now, with the requirement that the archive has the skill
+  folder as its root.
+- `references/model-routing.md` referred to "the class above Frontier" without ever
+  naming it in a table; it names Fable directly now.
+- `evals/trigger-evals.json` claimed all ten negatives were vocabulary-sharing
+  near-misses. Four are plainly out-of-scope one-step tasks, which is deliberate —
+  the note says so now.
+
 ## 1.3.1
 
 - Both special cases added in 1.3.0 corrected. The rules were right, the

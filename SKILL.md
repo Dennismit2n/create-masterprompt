@@ -13,7 +13,7 @@ description: >-
   so it stops guessing. Not for one-off questions or single-file edits.
 license: MIT
 metadata:
-  version: "1.3.1"
+  version: "1.4.0"
   repository: https://github.com/Dennismit2n/create-masterprompt
 ---
 
@@ -32,8 +32,8 @@ This skill builds that package through six phases and hands back three files.
 | File | Purpose | Lives for |
 |---|---|---|
 | `BRIEFING.md` | The master prompt. Context, decisions, anti-scope, pitfalls, current status. | The whole project |
-| `ENTSCHEIDUNGEN.md` / `DECISIONS.md` | One line per settled question, with the reason. Append-only. | The whole project |
-| `UEBERGABE_vNN.md` / `HANDOFF_vNN.md` | Written before a context limit. What a fresh session needs *right now*. | One session |
+| `DECISIONS.md` | One line per settled question, with the reason. Append-only. | The whole project |
+| `HANDOFF_vNN.md` | Written before a context limit. What a fresh session needs *right now*. | One session |
 
 Name them in the user's language. Keep them next to the work, not in chat.
 
@@ -44,8 +44,9 @@ entirely. Classify before starting:
 
 - **S — one sitting, reversible, no unknowns.** Skip to doing the work. Offer
   the full track only if it grows.
-- **M — a few sessions, some unknowns, one or two real forks.** Phases 1, 3, 5.
-  Briefing file, but short. No separate plan document.
+- **M — a few sessions, some unknowns, one or two real forks.** Phases 1–3 and 5,
+  plus 6 as soon as the work outlives one session. Briefing file, but short.
+  No separate plan document.
 - **L — multi-session, real architecture, decisions that are expensive to undo.**
   All six phases.
 
@@ -100,12 +101,13 @@ on it.
 **Look things up yourself.** If a fact is discoverable from files, tools or the
 web, discover it. Only genuine choices belong to the user.
 
-**Build nothing before this phase closes.** If the user says "just start" mid-
-interview: name the specific decisions still open, offer to make them yourself
+**Build nothing before this phase closes.** If the user says "just start"
+mid-interview: name the specific decisions still open, offer to make them yourself
 as recorded assumptions, and continue only after they pick. Starting with open
 forks means rework, and rework costs more than the interview did.
 
-Close with a numbered summary of every decision. Append to the decision log.
+Close with a numbered summary of every decision. Append it to the decision log,
+which follows `assets/template-decisions.md`.
 
 ## Phase 4 — Plan
 
@@ -132,8 +134,9 @@ it works well" is not.
 
 ## Phase 6 — Handoff
 
-Before the context limit — not after — write `UEBERGABE_vNN.md` from
-`assets/template-uebergabe.md`, then start a fresh session. Endless compaction
+Before the context limit — not after — write the handoff file
+(`HANDOFF_vNN.md`, named in the user's language) from
+`assets/template-handoff.md`, then start a fresh session. Endless compaction
 loses precisely the details that were expensive to establish.
 
 Triggers: long tool-heavy stretches, repeated re-reading of the same files, or

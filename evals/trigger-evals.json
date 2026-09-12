@@ -1,27 +1,86 @@
 {
   "skill_name": "create-masterprompt",
-  "note": "10 should-trigger, 10 should-not. Run each 3x, pass threshold 0.5. Negatives are deliberate near-misses that share vocabulary but need a different capability.",
+  "note": "10 should-trigger, 10 should-not. Run each 3x, pass threshold 0.5. Negatives come in two kinds: near-misses that share vocabulary with the description but need a different capability, and plainly out-of-scope one-step tasks that guard the \"not for one-off questions or single-file edits\" clause.",
   "queries": [
-    { "query": "I want to build a Markdown editor that syncs between my phone and PC. No idea where to start.", "should_trigger": true },
-    { "query": "write me a master prompt for my new side project", "should_trigger": true },
-    { "query": "my chats keep losing context and I have to re-explain everything every time", "should_trigger": true },
-    { "query": "how do I structure a project with claude so it stops guessing what I want", "should_trigger": true },
-    { "query": "need a kickoff brief for a roguelike I want to put on Steam", "should_trigger": true },
-    { "query": "can you make a context package I can paste into a fresh chat", "should_trigger": true },
-    { "query": "handing this project to a colleague next week, what should I write down", "should_trigger": true },
-    { "query": "i hav an idea for an app but evry chat i start from zero agin", "should_trigger": true },
-    { "query": "give me a spec and plan before we build the auth system, this is gonna take weeks", "should_trigger": true },
-    { "query": "set up a proper workflow for a multi-session build, research first then decisions", "should_trigger": true },
-
-    { "query": "write a system prompt that makes you act like a pirate", "should_trigger": false },
-    { "query": "improve the wording of this prompt: 'summarize the text below'", "should_trigger": false },
-    { "query": "what's the difference between a system prompt and a user prompt", "should_trigger": false },
-    { "query": "create a skill that converts CSV to JSON", "should_trigger": false },
-    { "query": "rename all .jpeg files in this folder to .jpg", "should_trigger": false },
-    { "query": "fix this null pointer exception in UserService.java", "should_trigger": false },
-    { "query": "summarize this 40-page PDF for me", "should_trigger": false },
-    { "query": "what is spec-driven development", "should_trigger": false },
-    { "query": "draft a project status email to my manager", "should_trigger": false },
-    { "query": "explain how context windows work in LLMs", "should_trigger": false }
+    {
+      "query": "I want to build a Markdown editor that syncs between my phone and PC. No idea where to start.",
+      "should_trigger": true
+    },
+    {
+      "query": "write me a master prompt for my new side project",
+      "should_trigger": true
+    },
+    {
+      "query": "my chats keep losing context and I have to re-explain everything every time",
+      "should_trigger": true
+    },
+    {
+      "query": "how do I structure a project with claude so it stops guessing what I want",
+      "should_trigger": true
+    },
+    {
+      "query": "need a kickoff brief for a roguelike I want to put on Steam",
+      "should_trigger": true
+    },
+    {
+      "query": "can you make a context package I can paste into a fresh chat",
+      "should_trigger": true
+    },
+    {
+      "query": "handing this project to a colleague next week, what should I write down",
+      "should_trigger": true
+    },
+    {
+      "query": "i hav an idea for an app but evry chat i start from zero agin",
+      "should_trigger": true
+    },
+    {
+      "query": "give me a spec and plan before we build the auth system, this is gonna take weeks",
+      "should_trigger": true
+    },
+    {
+      "query": "set up a proper workflow for a multi-session build, research first then decisions",
+      "should_trigger": true
+    },
+    {
+      "query": "write a system prompt that makes you act like a pirate",
+      "should_trigger": false
+    },
+    {
+      "query": "improve the wording of this prompt: 'summarize the text below'",
+      "should_trigger": false
+    },
+    {
+      "query": "what's the difference between a system prompt and a user prompt",
+      "should_trigger": false
+    },
+    {
+      "query": "create a skill that converts CSV to JSON",
+      "should_trigger": false
+    },
+    {
+      "query": "rename all .jpeg files in this folder to .jpg",
+      "should_trigger": false
+    },
+    {
+      "query": "fix this null pointer exception in UserService.java",
+      "should_trigger": false
+    },
+    {
+      "query": "summarize this 40-page PDF for me",
+      "should_trigger": false
+    },
+    {
+      "query": "what is spec-driven development",
+      "should_trigger": false
+    },
+    {
+      "query": "draft a project status email to my manager",
+      "should_trigger": false
+    },
+    {
+      "query": "explain how context windows work in LLMs",
+      "should_trigger": false
+    }
   ]
 }

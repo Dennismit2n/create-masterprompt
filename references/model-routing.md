@@ -19,7 +19,7 @@ than trusting this table.
 
 One constraint has nothing to do with difficulty: the Fast class is the only
 one still on a small context window — currently 200K, where Frontier, Mid and
-the class above Frontier all carry 1M. On a large codebase that ceiling is hit
+Fable all carry 1M. On a large codebase that ceiling is hit
 long before the task gets hard. Sheer scope can therefore rule the Fast class
 out; it is never a reason to step up a class.
 
