@@ -6,17 +6,29 @@ after each step.
 ## Route by class, not by name
 
 Model names churn. Routing that hard-codes them is stale within months. Route
-by **class**, and keep the name mapping in one place where it is cheap to update.
+by **class**, and keep the name mapping in one place where it is cheap to
+update. The names below are current as of mid-2026 in Anthropic's lineup and
+are the part most likely to be out of date — check the current lineup rather
+than trusting this table.
 
-| Class | What it is for |
-|---|---|
-| **Frontier** | Judgement under ambiguity, architecture, weighing contradictory evidence, security-relevant decisions, anything where being wrong is expensive |
-| **Mid** | Well-specified execution against a clear plan — most implementation, refactors, tests, docs |
-| **Fast** | Mechanical transformation with a verifiable result — renames, format conversion, boilerplate, extraction |
+| Class | Currently | What it is for |
+|---|---|---|
+| **Frontier** | Opus | Judgement under ambiguity, architecture, weighing contradictory evidence, security-relevant decisions, anything where being wrong is expensive |
+| **Mid** | Sonnet | Well-specified execution against a clear plan — most implementation, refactors, tests, docs |
+| **Fast** | Haiku | Mechanical transformation with a verifiable result — renames, format conversion, boilerplate, extraction |
 
-Name mapping, current as of mid-2026 in Anthropic's lineup: Frontier =
-Opus-class; Mid = Sonnet-class; Fast = Haiku-class. Check the current lineup
-rather than trusting this line — it is the part most likely to be out of date.
+## Two special cases outside the classes
+
+These are chosen by **operating condition**, not by difficulty. They do not
+replace a class — they override the choice when their condition applies.
+
+| Condition | Model | Why |
+|---|---|---|
+| Multi-hour unattended run | A model above the Frontier class, built for sustained throughput (Anthropic: **Fable**) | Over a long unattended stretch, throughput decides whether the run finishes at all. The Frontier class is too slow to hold the distance |
+| Very long session across a whole repository | Mid class with an extended context window (Anthropic: `sonnet[1m]`) | Not a different class — the same Mid class with more room. Applies when the problem is the volume of files, not the difficulty of the task |
+
+Rule of thumb: pick the class by difficulty first, then check whether either
+condition applies and overrides it.
 
 ## Per phase
 
@@ -43,9 +55,14 @@ while inflating the large one is not saving.
 ## Automate rather than announce
 
 Where the environment can switch automatically — model config per phase, a
-per-directory setting, a session-level default — set it up once rather than
-announcing a switch every time. An announcement the user has to act on is a
-task disguised as information.
+per-directory setting, a session-level default, a per-subagent model field —
+set it up once rather than announcing a switch every time. An announcement the
+user has to act on is a task disguised as information.
+
+Automation has a brake worth knowing about: a rule that drops to a cheaper
+class after a planning stage stays there, however hard the execution turns out
+to be. When the work is genuinely demanding, step back up and say so rather
+than accepting the automatic downgrade.
 
 Where it cannot be automated, two lines suffice after a finished step: which
 class fits the next task and why, plus — if different — which class would be
@@ -55,7 +72,8 @@ they are trading away, instead of quietly making the trade for them.
 ## When routing does not apply
 
 - **Long agentic sequences with many tool calls.** Consistency across the run
-  beats per-step optimisation. Pick one class and stay.
+  beats per-step optimisation. Pick one class and stay. If the run is
+  unattended and spans hours, see the special cases above.
 - **Anything touching security, money, data loss or irreversible actions.**
   Frontier, regardless of how simple the task looks. The cost asymmetry is the
   whole argument.
