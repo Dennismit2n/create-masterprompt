@@ -35,6 +35,10 @@ This skill produces three files:
 A size gate first, then six phases: **research → briefing → decision interview
 → plan → build → handoff**, with a quality gate on each.
 
+**Deutschsprachig?** `SKILL.de.md` is a full German translation of the skill, and
+[`docs/uebersicht-de.png`](docs/uebersicht-de.png) is a one-page German overview.
+The skill itself stays English — it answers in whatever language you write in.
+
 ## Install
 
 **Claude Code / any SKILL.md client**

@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.5.0
+
+- Added `SKILL.de.md`, a complete German translation of the skill, and
+  `docs/uebersicht-de.png`, a one-page German overview of what it produces and
+  how the phases run. The skill itself stays English — it is the international
+  version and it answers in whatever language it is addressed in. The German
+  files exist so that someone who reads no English can still judge what this
+  thing does before installing it.
+- `SKILL.de.md` deliberately carries **no frontmatter**, so no client mistakes it
+  for a second skill definition. `SKILL.md` stays the only machine-read file, and
+  the German file says so in its first paragraph.
+- `docs/` is marked `export-ignore` in `.gitattributes`: the overview image lives
+  in the repository but stays out of the release archive, which has no use for
+  90 KB an agent never reads.
+
 ## 1.4.0
 
 - **The M track was self-contradicting.** It listed phases 1, 3, 5 and then asked
