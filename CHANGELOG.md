@@ -1,5 +1,27 @@
 # Changelog
 
+## 1.3.1
+
+- Both special cases added in 1.3.0 corrected. The rules were right, the
+  reasons were not.
+  - The multi-hour unattended run was justified with throughput — "built for
+    sustained throughput", "the Frontier class is too slow to hold the
+    distance". That is backwards. The class above Frontier is the more capable
+    choice, not the faster one, and what fails over a long unattended run is
+    drifting off the brief across many steps, not the duration of any single
+    step. Rewritten around instruction-following over the distance.
+  - The extended-context case is gone entirely. It assumed a separate Mid-class
+    variant with a larger window; Frontier, Mid and the class above Frontier
+    now all carry 1M by default, so there is nothing left to route to. What
+    survives is the inverse: the Fast class is the only one still on a small
+    window, which makes sheer scope an exclusion criterion for that class, not
+    a case of its own. Moved under the class table, where a constraint on a
+    class belongs.
+- With one case left, a section of its own was more structure than the content
+  needed. The override is now prose after the class table.
+- Added a note on fast mode as a throughput lever, deliberately separate from
+  the class question — speed on the same model is not a routing argument.
+
 ## 1.3.0
 
 - Fixed a regression in `references/model-routing.md`: the three-class model

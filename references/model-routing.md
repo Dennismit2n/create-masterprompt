@@ -17,18 +17,27 @@ than trusting this table.
 | **Mid** | Sonnet | Well-specified execution against a clear plan — most implementation, refactors, tests, docs |
 | **Fast** | Haiku | Mechanical transformation with a verifiable result — renames, format conversion, boilerplate, extraction |
 
-## Two special cases outside the classes
+One constraint has nothing to do with difficulty: the Fast class is the only
+one still on a small context window — currently 200K, where Frontier, Mid and
+the class above Frontier all carry 1M. On a large codebase that ceiling is hit
+long before the task gets hard. Sheer scope can therefore rule the Fast class
+out; it is never a reason to step up a class.
 
-These are chosen by **operating condition**, not by difficulty. They do not
-replace a class — they override the choice when their condition applies.
+## When the operating condition overrides the class
 
-| Condition | Model | Why |
-|---|---|---|
-| Multi-hour unattended run | A model above the Frontier class, built for sustained throughput (Anthropic: **Fable**) | Over a long unattended stretch, throughput decides whether the run finishes at all. The Frontier class is too slow to hold the distance |
-| Very long session across a whole repository | Mid class with an extended context window (Anthropic: `sonnet[1m]`) | Not a different class — the same Mid class with more room. Applies when the problem is the volume of files, not the difficulty of the task |
+Class follows difficulty, with one exception that follows the operating
+condition instead. For a **multi-hour unattended run**, take the class above
+Frontier (Anthropic: **Fable**). What goes wrong over a long unattended stretch
+is drifting off the brief across many steps, not any single step taking too
+long — and that class is built to follow instructions precisely across sessions
+that run for hours without supervision. It is the more capable choice, not the
+faster one.
 
-Rule of thumb: pick the class by difficulty first, then check whether either
-condition applies and overrides it.
+Throughput, if you need it, is a separate lever: Anthropic previews a **fast
+mode** that serves the Frontier class at up to roughly 2.5x the output speed for
+a premium price, currently on the Claude API only and with its own rate limit.
+It buys speed on the same model. It is not an argument for one class over
+another, and as a preview it is the part of this page most likely to be gone.
 
 ## Per phase
 
@@ -73,7 +82,7 @@ they are trading away, instead of quietly making the trade for them.
 
 - **Long agentic sequences with many tool calls.** Consistency across the run
   beats per-step optimisation. Pick one class and stay. If the run is
-  unattended and spans hours, see the special cases above.
+  unattended and spans hours, see the override above.
 - **Anything touching security, money, data loss or irreversible actions.**
   Frontier, regardless of how simple the task looks. The cost asymmetry is the
   whole argument.
