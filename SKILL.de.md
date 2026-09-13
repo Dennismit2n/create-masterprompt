@@ -2,12 +2,13 @@
 
 > Übersetzung von `SKILL.md`. **Gelesen wird vom Programm ausschließlich
 > `SKILL.md`**, die englische Datei — diese hier ist zum Nachlesen für Menschen.
-> Wenn sich beide widersprechen, gilt die englische. Stand: Version 1.5.1.
+> Wenn sich beide widersprechen, gilt die englische. Stand: Version 1.6.0.
 >
 > Dateinamen, Ordner und Beispielbefehle stehen absichtlich unübersetzt, weil
 > sie so auf der Festplatte heißen.
 >
-> Eine Seite zum Überblicken statt zum Durchlesen: [`docs/uebersicht-de.png`](docs/uebersicht-de.png).
+> Eine Seite zum Überblicken statt zum Durchlesen: [`docs/uebersicht-de.png`](docs/uebersicht-de.png)
+> (englische Fassung: [`docs/uebersicht-en.png`](docs/uebersicht-en.png)).
 
 Ein Masterprompt ist **keine** Rollenanweisung. „Du bist ein erfahrener
 Entwickler, arbeite gründlich“ fügt nichts hinzu, was ein fähiges Modell nicht

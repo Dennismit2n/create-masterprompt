@@ -35,9 +35,10 @@ This skill produces three files:
 A size gate first, then six phases: **research → briefing → decision interview
 → plan → build → handoff**, with a quality gate on each.
 
-**Deutschsprachig?** `SKILL.de.md` is a full German translation of the skill, and
-[`docs/uebersicht-de.png`](docs/uebersicht-de.png) is a one-page German overview.
-The skill itself stays English — it answers in whatever language you write in.
+**Overview in one page:** [`docs/uebersicht-en.png`](docs/uebersicht-en.png) (English) or
+[`docs/uebersicht-de.png`](docs/uebersicht-de.png) (German). **Deutschsprachig?**
+`SKILL.de.md` is a full German translation of the skill. The skill itself stays
+English — it answers in whatever language you write in.
 
 ## Install
 
@@ -128,7 +129,8 @@ create-masterprompt/
 ├── evals/
 │   └── trigger-evals.json          # 20 queries for description tuning
 └── docs/
-    └── uebersicht-de.png           # one-page German overview (export-ignore)
+    ├── uebersicht-de.png           # one-page German overview (export-ignore)
+    └── uebersicht-en.png           # one-page English overview (export-ignore)
 ```
 
 ## Contributing

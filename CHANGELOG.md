@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.6.0
+
+- Added `docs/uebersicht-en.png`, an English counterpart to the German
+  overview. Both are one-page summaries of what the skill produces and how
+  the phases run — for someone deciding whether to install it, not for
+  someone already using it.
+- `docs/uebersicht-de.png` had "Version 1.4.0" baked into it, stale since
+  1.5.0. Both images now say 1.6.0; re-rendered from the same Playwright
+  script, palette-quantized the same way.
+- README and `SKILL.de.md` now point at both images.
+
 ## 1.5.1
 
 - The placeholder quoting from 1.4.0 only ever reached `template-decisions.md`.
