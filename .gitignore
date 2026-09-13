@@ -1,3 +1,8 @@
 *.skill
 *.zip
 .DS_Store
+
+# Werbebilder des Launchkits. Bleiben bewusst unversioniert: docs/ und alles
+# andere hier landet per `git clone --depth 1` im Skill-Ordner jedes Nutzers.
+# Die GitHub-Vorschau wird von Hand in den Repo-Einstellungen hochgeladen.
+promo/
