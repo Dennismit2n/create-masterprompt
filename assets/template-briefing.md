@@ -1,14 +1,14 @@
-# BRIEFING — <project name>
+# BRIEFING — `<project name>`
 
 > Master prompt for this project. A fresh session with zero history starts here.
-> Version: <n> · Last updated: <date> · Size: <S | M | L>
+> Version: `<n>` · Last updated: `<date>` · Size: `<S | M | L>`
 
 ## Status
 
-- **Phase:** <research | briefing | decisions | plan | build | handoff>
-- **Last completed:** <what actually finished>
-- **Next step:** <the single next action, concrete enough to start>
-- **Blocked by:** <blocker, or "nothing">
+- **Phase:** `<research | briefing | decisions | plan | build | handoff>`
+- **Last completed:** `<what actually finished>`
+- **Next step:** `<the single next action, concrete enough to start>`
+- **Blocked by:** `<blocker, or "nothing">`
 
 ## What this is
 
@@ -32,13 +32,13 @@ free addition.
 
 | Not doing | Reason |
 |---|---|
-| <thing> | <why not — cost, risk, scope, or explicitly deferred to v2> |
+| `<thing>` | `<why not — cost, risk, scope, or explicitly deferred to v2>` |
 
 ## Constraints
 
-- **Environment:** <OS, hardware, runtimes, devices>
-- **Hard limits:** <offline capable, no telemetry, no paid services, …>
-- **Time and effort:** <how much is actually available>
+- **Environment:** `<OS, hardware, runtimes, devices>`
+- **Hard limits:** `<offline capable, no telemetry, no paid services, …>`
+- **Time and effort:** `<how much is actually available>`
 
 ## Decisions
 
@@ -46,7 +46,7 @@ Summary. Full reasoning lives in the decision log.
 
 | # | Question | Chosen | Reason |
 |---|---|---|---|
-| 1 | <question> | <option> | <one line> |
+| 1 | `<question>` | `<option>` | `<one line>` |
 
 ## Assumption register
 
@@ -54,24 +54,24 @@ Decided without asking. Fair game to challenge.
 
 | Assumption | Impact if wrong |
 |---|---|
-| <assumption> | <what breaks> |
+| `<assumption>` | `<what breaks>` |
 
 ## Known pitfalls
 
 From research and from things that already went wrong here. Source or
 "experienced directly" per line.
 
-- <pitfall> — <source>
+- `<pitfall>` — `<source>`
 
 ## Open questions
 
-- <question> — <who or what can settle it>
+- `<question>` — `<who or what can settle it>`
 
 ## Milestones
 
 | # | Vertical slice | Done when |
 |---|---|---|
-| 1 | <what the user can run after this> | <checkable condition> |
+| 1 | `<what the user can run after this>` | `<checkable condition>` |
 
 ## Conventions
 

@@ -2,7 +2,7 @@
 
 > Übersetzung von `SKILL.md`. **Gelesen wird vom Programm ausschließlich
 > `SKILL.md`**, die englische Datei — diese hier ist zum Nachlesen für Menschen.
-> Wenn sich beide widersprechen, gilt die englische. Stand: Version 1.5.0.
+> Wenn sich beide widersprechen, gilt die englische. Stand: Version 1.5.1.
 >
 > Dateinamen, Ordner und Beispielbefehle stehen absichtlich unübersetzt, weil
 > sie so auf der Festplatte heißen.
@@ -10,7 +10,7 @@
 > Eine Seite zum Überblicken statt zum Durchlesen: [`docs/uebersicht-de.png`](docs/uebersicht-de.png).
 
 Ein Masterprompt ist **keine** Rollenanweisung. „Du bist ein erfahrener
-Entwickler, arbeite gründlich" fügt nichts hinzu, was ein fähiges Modell nicht
+Entwickler, arbeite gründlich“ fügt nichts hinzu, was ein fähiges Modell nicht
 ohnehin tut. Ein Masterprompt ist ein **Kontext-Paket**: die dauerhaften
 Fakten, Entscheidungen und Grenzen eines Vorhabens, so aufgeschrieben, dass
 eine Sitzung ohne jeden Gesprächsverlauf genau dort weitermacht, wo die letzte
@@ -72,7 +72,7 @@ entscheiden, ob er mehr Zeit hineinsteckt.
 Die Recherche zu `BRIEFING.md` verdichten, mit `assets/template-briefing.md`
 als Vorlage.
 
-Der Test für diese Datei: **gib sie einer frischen Sitzung ohne Verlauf. Kann
+Der Test für diese Datei: **Gib sie einer frischen Sitzung ohne Verlauf. Kann
 die damit arbeiten?** Wenn auch nur eine Rückfrage zu etwas nötig ist, das du
 bereits wusstest, ist das Briefing unvollständig. Lies es gegnerisch gegen,
 bevor du es zeigst.
@@ -82,9 +82,9 @@ bereut werden:
 
 - **Anti-Scope.** Ausdrückliche Nicht-Ziele, jedes mit Begründung. „Keine
   Verschlüsselung in v1 — der Tresor liegt nur lokal, und die
-  Schlüsselverwaltung würde den Bau verdoppeln." Anti-Scope ist die stärkste
+  Schlüsselverwaltung würde den Bau verdoppeln.“ Anti-Scope ist die stärkste
   verfügbare Abwehr gegen schleichende Ausweitung, weil daraus für jedes
-  „könnten wir nicht einfach …" eine Entscheidung wird, die wieder aufgemacht
+  „könnten wir nicht einfach …“ eine Entscheidung wird, die wieder aufgemacht
   werden muss, statt einer kostenlosen Zugabe.
 - **Annahmen-Register.** Alles, was du ohne Rückfrage entschieden hast. Je eine
   Zeile, markiert, damit es später angreifbar bleibt. Unaufgeschriebene
@@ -106,7 +106,7 @@ herausfinden lässt, findest du heraus. Nur echte Wahlmöglichkeiten gehören de
 Nutzer.
 
 **Vor dem Ende dieser Phase wird nichts gebaut.** Wenn der Nutzer mitten im
-Interview „fang einfach an" sagt: benenne die konkret noch offenen
+Interview „fang einfach an“ sagt: benenne die konkret noch offenen
 Entscheidungen, biete an, sie selbst als festgehaltene Annahmen zu treffen, und
 mach erst weiter, wenn er gewählt hat. Mit offenen Gabelungen anzufangen heißt
 Nacharbeit, und Nacharbeit kostet mehr als das Interview.
@@ -131,7 +131,7 @@ Den Plan vor dem Bauen zur Abnahme zeigen.
 
 Gegen ein ausgesprochenes Ziel mit einer **prüfbaren Abbruchbedingung**
 arbeiten. „Fertig, wenn `npm test` durchläuft und die App den Tresor-Ordner
-öffnet" ist prüfbar. „Fertig, wenn es gut funktioniert" ist es nicht.
+öffnet“ ist prüfbar. „Fertig, wenn es gut funktioniert“ ist es nicht.
 
 - Test vor Funktion, wo ein Test sinnvoll ist.
 - Kleine Commits, jeder für sich zurücknehmbar.
@@ -169,7 +169,7 @@ Erzeugen und Bewerten sind verschiedene Tätigkeiten. Der Schreiber kann die
 Lücke nicht sehen, weil das fehlende Stück in seinem Kopf steht. Kostet
 ungefähr 30 % der Phase und bringt mehr als alles andere in diesem Skill.
 
-Wenn die Aufgabenform über „schreib mir X" hinausgeht, zuerst
+Wenn die Aufgabenform über „schreib mir X“ hinausgeht, zuerst
 `references/prompt-techniques.md` laden — dort steht die Zuordnung von
 Aufgabenform zu Technik und die Warnzeichen für Über-Prompting.
 
@@ -214,7 +214,7 @@ Symptom umgehst.
   keine doppelten Bindestriche, kein Bindestrich am Anfang oder Ende. Höchstens
   64 Zeichen. `description` höchstens 1024.
 - **Ein ungequoteter Doppelpunkt in `description` zerschießt das YAML.** „Use
-  when: …" scheitert. Quoten oder einen Block-Skalar (`>-`) nehmen.
+  when: …“ scheitert. Quoten oder einen Block-Skalar (`>-`) nehmen.
 - **Beim Sitzungsstart werden nur `name` und `description` geladen.** Der
   Rumpf lädt erst beim Auslösen. Deshalb gehört jeder Hinweis darauf, wann
   dieser Skill zu nehmen ist, in die `description`; eine Auslösebedingung, die
@@ -240,7 +240,7 @@ Diese laden, wenn die Phase sie verlangt, nicht vorab:
   Lesen, wenn dem Nutzer Modellwahl oder Kosten wichtig sind.
 - `references/prompt-techniques.md` — Zuordnung von Aufgabenform zu Technik,
   dazu Warnzeichen für Über-Prompting. Lesen, wenn eine Phase nicht liefert,
-  ein Ergebnis dünn wirkt oder die Aufgabe über „schreib mir X" hinausgeht.
+  ein Ergebnis dünn wirkt oder die Aufgabe über „schreib mir X“ hinausgeht.
 
 Die Vorlagen unter `assets/` sind zum Kopieren und Ausfüllen gedacht, nicht zum
 Umschreiben. Strukturen werden zuverlässiger getroffen als Prosa-Beschreibungen
@@ -269,5 +269,5 @@ Diese prägen jede Antwort, solange der Skill aktiv ist:
 - **Annahmen laut aussprechen.** Wenn du nicht sicher bist, ob deine Annahme
   trägt, sag es, statt sie als Tatsache zu verkaufen.
 - **Keine Nachhak-Fragen, wenn eine Aufgabe fertig ist.** Kein „sonst noch
-  etwas?", keine Auswahlliste zum Abschluss. Wenn der Nutzer mehr will, sagt er
+  etwas?“, keine Auswahlliste zum Abschluss. Wenn der Nutzer mehr will, sagt er
   es.

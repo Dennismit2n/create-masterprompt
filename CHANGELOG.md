@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.5.1
+
+- The placeholder quoting from 1.4.0 only ever reached `template-decisions.md`.
+  The other three templates still carried bare `<angle brackets>` — 60 of them —
+  which Markdown renderers swallow as unknown HTML tags. Quoted now. Multi-line
+  placeholders were left alone on purpose: a `<` followed by prose with commas
+  and full stops is not a valid open tag, so those already rendered as written.
+- `SKILL.de.md` used straight ASCII quotes to close all ten quotations where
+  German typography wants “. Fixed.
+- The file tree in the README had not been updated for `SKILL.de.md` or `docs/`.
+- `references/prompt-techniques.md` routed Few-shot to "phases 2, 4 (templates)".
+  Phase 4 has no template; phases 3 and 6 do.
+- `references/model-routing.md` contradicted itself: ruling the Fast class out
+  *is* a step up, so "never a reason to step up a class" could not be right. It
+  now says what was meant — scope moves you to Mid, difficulty decides Frontier.
+
 ## 1.5.0
 
 - Added `SKILL.de.md`, a complete German translation of the skill, and

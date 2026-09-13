@@ -113,6 +113,7 @@ this file is going to end up in a git repo.
 ```
 create-masterprompt/
 ├── SKILL.md                        # method, gates, gotchas, house rules
+├── SKILL.de.md                     # German translation, no frontmatter
 ├── references/
 │   ├── profile-questionnaire.md    # 11 slots for a personal variant
 │   ├── quality-gates.md            # per-phase checklist
@@ -124,8 +125,10 @@ create-masterprompt/
 │   ├── template-decisions.md
 │   ├── template-handoff.md
 │   └── template-profile.md
-└── evals/
-    └── trigger-evals.json          # 20 queries for description tuning
+├── evals/
+│   └── trigger-evals.json          # 20 queries for description tuning
+└── docs/
+    └── uebersicht-de.png           # one-page German overview (export-ignore)
 ```
 
 ## Contributing

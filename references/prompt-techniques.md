@@ -26,7 +26,7 @@ and it cuts more than people expect.
 | How you recognise it | Technique | Phase |
 |---|---|---|
 | Large task that splits into stages, each output feeding the next | **Prompt chaining** | 0–6, this is the method itself |
-| Format is hard to describe but easy to show | **Few-shot** | 2, 4 (templates) |
+| Format is hard to describe but easy to show | **Few-shot** | 2, 3, 6 (templates) |
 | The result must hold up; being wrong is expensive | **Self-consistency** | 1, 3 |
 | Facts are missing before anything can be decided | **Generate-knowledge** | 1 → 2 |
 | Several viable paths that constrain each other, backtracking likely | **Tree-of-thoughts** | 3, 4 |
