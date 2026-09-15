@@ -1,5 +1,27 @@
 # Changelog
 
+## 1.7.0
+
+- **Thirteen translations instead of one.** `SKILL.<lang>.md` now exists for
+  es, fr, it, nl, pl, pt, tr, ru, hi, zh, ja and ko alongside de — the same
+  fourteen languages the workshop's start page speaks. Each was translated
+  from the English original by one agent and then checked against it,
+  section by section, by a second one that fixed what it found in place;
+  every reviewer found something, from a pronoun with the wrong referent
+  (es) to a house rule translated into its own opposite (it). An
+  independent script then confirmed for every file: fourteen H2 sections in
+  order, all twenty inline-code spans byte-identical to the original, the
+  same number of bullets, numbered items and table rows per section, no
+  frontmatter, LF line endings. `SKILL.md` remains the only file the
+  program reads.
+- **Overview images in all fourteen languages** under `docs/`, now generated
+  from one template instead of two hand-written pages, so the next version
+  bump is one command rather than fourteen edits. All say 1.7.0. The
+  template sets `<html lang>`, which is what makes Chromium pick the right
+  regional glyphs for Chinese versus Japanese.
+- README carries a table of all fourteen; the layout tree shows the pattern
+  instead of listing thirteen near-identical lines.
+
 ## 1.6.1
 
 - Added a status note to the README and to `SKILL.de.md`: this is an early

@@ -2,7 +2,7 @@
 
 > Übersetzung von `SKILL.md`. **Gelesen wird vom Programm ausschließlich
 > `SKILL.md`**, die englische Datei — diese hier ist zum Nachlesen für Menschen.
-> Wenn sich beide widersprechen, gilt die englische. Stand: Version 1.6.1.
+> Wenn sich beide widersprechen, gilt die englische. Stand: Version 1.7.0.
 >
 > Dateinamen, Ordner und Beispielbefehle stehen absichtlich unübersetzt, weil
 > sie so auf der Festplatte heißen.

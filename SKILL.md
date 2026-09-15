@@ -13,7 +13,7 @@ description: >-
   so it stops guessing. Not for one-off questions or single-file edits.
 license: MIT
 metadata:
-  version: "1.6.1"
+  version: "1.7.0"
   repository: https://github.com/Dennismit2n/create-masterprompt
 ---
 

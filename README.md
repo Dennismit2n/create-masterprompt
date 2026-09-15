@@ -41,10 +41,31 @@ This skill produces three files:
 A size gate first, then six phases: **research → briefing → decision interview
 → plan → build → handoff**, with a quality gate on each.
 
-**Overview in one page:** [`docs/uebersicht-en.png`](docs/uebersicht-en.png) (English) or
-[`docs/uebersicht-de.png`](docs/uebersicht-de.png) (German). **Deutschsprachig?**
-`SKILL.de.md` is a full German translation of the skill. The skill itself stays
-English — it answers in whatever language you write in.
+**Fourteen languages.** `SKILL.md` is the English original and the only file
+the program reads. Every other language has a full human-readable translation
+with the same fourteen sections, and every language has a one-page overview
+image — the same fourteen the workshop's start page speaks:
+
+| Language | Translation | Overview |
+|---|---|---|
+| Deutsch | [`SKILL.de.md`](SKILL.de.md) | [`docs/uebersicht-de.png`](docs/uebersicht-de.png) |
+| English | `SKILL.md` (original) | [`docs/uebersicht-en.png`](docs/uebersicht-en.png) |
+| Español | [`SKILL.es.md`](SKILL.es.md) | [`docs/uebersicht-es.png`](docs/uebersicht-es.png) |
+| Français | [`SKILL.fr.md`](SKILL.fr.md) | [`docs/uebersicht-fr.png`](docs/uebersicht-fr.png) |
+| Italiano | [`SKILL.it.md`](SKILL.it.md) | [`docs/uebersicht-it.png`](docs/uebersicht-it.png) |
+| Nederlands | [`SKILL.nl.md`](SKILL.nl.md) | [`docs/uebersicht-nl.png`](docs/uebersicht-nl.png) |
+| Polski | [`SKILL.pl.md`](SKILL.pl.md) | [`docs/uebersicht-pl.png`](docs/uebersicht-pl.png) |
+| Português | [`SKILL.pt.md`](SKILL.pt.md) | [`docs/uebersicht-pt.png`](docs/uebersicht-pt.png) |
+| Türkçe | [`SKILL.tr.md`](SKILL.tr.md) | [`docs/uebersicht-tr.png`](docs/uebersicht-tr.png) |
+| Русский | [`SKILL.ru.md`](SKILL.ru.md) | [`docs/uebersicht-ru.png`](docs/uebersicht-ru.png) |
+| हिन्दी | [`SKILL.hi.md`](SKILL.hi.md) | [`docs/uebersicht-hi.png`](docs/uebersicht-hi.png) |
+| 中文 | [`SKILL.zh.md`](SKILL.zh.md) | [`docs/uebersicht-zh.png`](docs/uebersicht-zh.png) |
+| 日本語 | [`SKILL.ja.md`](SKILL.ja.md) | [`docs/uebersicht-ja.png`](docs/uebersicht-ja.png) |
+| 한국어 | [`SKILL.ko.md`](SKILL.ko.md) | [`docs/uebersicht-ko.png`](docs/uebersicht-ko.png) |
+
+The translations carry no frontmatter, so no client mistakes them for a second
+skill definition. The skill itself stays English — it answers in whatever
+language you write in.
 
 ## Install
 
@@ -120,7 +141,7 @@ this file is going to end up in a git repo.
 ```
 create-masterprompt/
 ├── SKILL.md                        # method, gates, gotchas, house rules
-├── SKILL.de.md                     # German translation, no frontmatter
+├── SKILL.<lang>.md                 # 13 translations, no frontmatter — table above
 ├── references/
 │   ├── profile-questionnaire.md    # 11 slots for a personal variant
 │   ├── quality-gates.md            # per-phase checklist
@@ -135,8 +156,7 @@ create-masterprompt/
 ├── evals/
 │   └── trigger-evals.json          # 20 queries for description tuning
 └── docs/
-    ├── uebersicht-de.png           # one-page German overview (export-ignore)
-    └── uebersicht-en.png           # one-page English overview (export-ignore)
+    └── uebersicht-<lang>.png       # one-page overview, 14 languages (export-ignore)
 ```
 
 ## Contributing
