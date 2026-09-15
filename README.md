@@ -7,6 +7,12 @@ with zero conversation history.
 Works in Claude Code, claude.ai, and any client that supports the SKILL.md
 standard.
 
+> **Status: early release.** The text has been through repeated internal
+> consistency and spec-compliance passes, but the skill itself hasn't run on
+> many real, varied projects yet. If the size gate, the phase sequence, or a
+> template doesn't fit how you actually work, that's useful signal — please
+> open an issue.
+
 ## The problem
 
 You start a project with an AI assistant. Session one goes well. Session two,

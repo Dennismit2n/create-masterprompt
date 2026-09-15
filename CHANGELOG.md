@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.6.1
+
+- Added a status note to the README and to `SKILL.de.md`: this is an early
+  release. The text has had repeated consistency and spec-compliance passes,
+  but the skill hasn't run on many real, varied projects yet — the size gate,
+  the phase sequence and the templates are still short on real mileage. Says
+  so plainly and points at issues rather than letting silence imply more
+  confidence than is warranted.
+
 ## 1.6.0
 
 - Added `docs/uebersicht-en.png`, an English counterpart to the German
