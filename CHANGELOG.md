@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+- **Overview images without a version stamp.** The one-page overviews under
+  `docs/` no longer show a version number, so they only need rebuilding when
+  their content changes. Rebuilt for all fourteen languages.
+- **Build chain in the repo.** `tools/uebersicht/` holds the template, the
+  fourteen string files and the scripts that render, quantize and check the
+  overview images. Like `docs/`, it is `export-ignore` and stays out of the
+  release archive.
+- **Line endings pinned.** `.gitattributes` now sets `* text=auto eol=lf`, so
+  checkouts and archives are LF on every machine.
+
 ## 1.7.0
 
 - **Thirteen translations instead of one.** `SKILL.<lang>.md` now exists for

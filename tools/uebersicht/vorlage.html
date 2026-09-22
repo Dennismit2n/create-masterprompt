@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="{{code}}">
+<meta charset="utf-8">
+<title>create-masterprompt — {{band_lang}}</title>
+<style>
+  :root{
+    --bg:#0D1226; --panel:#141B36; --text:#E6E9F7; --soft:#A29CCB;
+    --border:#263056; --royal:#2439B2; --ice:#8FD3F4; --rost:#fb923c; --rost-tief:#7c2d12;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);font:16px/1.55 "Segoe UI",system-ui,sans-serif;color:var(--text)}
+  .blatt{width:1100px;padding:56px 60px 44px}
+
+  header{display:flex;align-items:center;gap:20px;padding-bottom:26px;border-bottom:1px solid var(--border)}
+  .icon{width:72px;height:72px;flex:none}
+  h1{font-size:38px;letter-spacing:-.5px;color:var(--rost);font-weight:700}
+  .unter{color:var(--soft);font-size:17px;margin-top:4px}
+  .band{margin-left:auto;text-align:right;color:var(--soft);font-size:13px;line-height:1.7;flex:none;padding-left:20px}
+  .band b{color:var(--text);font-weight:600}
+
+  .lead{margin:26px 0 30px;font-size:19px;line-height:1.6;max-width:82ch}
+  .lead strong{color:var(--ice)}
+
+  h2{font-size:13px;letter-spacing:1.6px;text-transform:uppercase;color:var(--rost);
+     margin:0 0 14px;font-weight:700}
+  section{margin-bottom:30px}
+
+  .dateien{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .datei{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+  .datei code{color:var(--ice);font-size:15px;font-weight:600;font-family:Consolas,monospace}
+  .datei p{color:var(--soft);font-size:14px;margin-top:7px}
+  .datei .dauer{margin-top:10px;font-size:12px;color:var(--rost);letter-spacing:.4px}
+
+  .gate{background:linear-gradient(90deg,var(--rost-tief),transparent 70%);
+        border-left:3px solid var(--rost);border-radius:0 10px 10px 0;padding:13px 18px;margin-bottom:14px}
+  .gate b{color:var(--rost)}
+  .gate span{color:var(--soft);font-size:14px}
+
+  .phasen{display:grid;grid-template-columns:repeat(2,1fr);gap:11px 18px}
+  .phase{display:flex;gap:13px;align-items:baseline}
+  .nr{flex:none;width:26px;height:26px;border-radius:50%;background:var(--royal);color:#fff;
+      font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;
+      transform:translateY(3px)}
+  .phase b{font-size:16px}
+  .phase span{color:var(--soft);font-size:14px;display:block;margin-top:1px}
+
+  pre{background:#0a0e1e;border:1px solid var(--border);border-radius:10px;padding:15px 18px;
+      font-family:Consolas,monospace;font-size:12.5px;color:#cdd6e8;line-height:1.8;white-space:pre-wrap;word-break:break-all}
+  pre .c{color:#6b7594}
+  .zwei{display:grid;grid-template-columns:1.55fr 1fr;gap:20px;align-items:start}
+  .hinweis{color:var(--soft);font-size:14px;line-height:1.65}
+  .hinweis b{color:var(--text)}
+  .hinweis code{font-family:Consolas,monospace}
+
+  footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--border);
+         display:flex;justify-content:space-between;align-items:center;gap:24px;color:var(--soft);font-size:13.5px}
+  footer b{color:var(--text)}
+  footer code{color:var(--ice);font-family:Consolas,monospace}
+  .fam{display:flex;gap:0;height:5px;width:150px;flex:none;border-radius:3px;overflow:hidden}
+  .fam i{flex:1}
+</style>
+
+<div class="blatt">
+  <header>
+    <svg class="icon" viewBox="0 0 48 48">
+      <rect x="2" y="2" width="44" height="44" rx="11" fill="#7c2d12"/>
+      <circle cx="14" cy="11" r="2.2" fill="#fb923c" opacity=".55"/>
+      <circle cx="24" cy="8.5" r="2.2" fill="#fb923c" opacity=".85"/>
+      <circle cx="34" cy="11.5" r="2.2" fill="#fb923c" opacity=".55"/>
+      <path d="M17 17l7 6 7-6" fill="none" stroke="#fb923c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="12" y="27.5" width="24" height="3.4" rx="1.7" fill="#fb923c"/>
+      <rect x="12" y="33" width="24" height="3.4" rx="1.7" fill="#fb923c" opacity=".75"/>
+      <rect x="12" y="38.5" width="16" height="3.4" rx="1.7" fill="#fb923c" opacity=".5"/>
+    </svg>
+    <div>
+      <h1>create-masterprompt</h1>
+      <div class="unter">{{unter}}</div>
+    </div>
+    <div class="band">
+      <b>MIT</b><br>
+      {{band_kind}}<br>
+      {{band_lang}}
+    </div>
+  </header>
+
+  <p class="lead">{{lead}}</p>
+
+  <section>
+    <h2>{{h_produce}}</h2>
+    <div class="dateien">
+      <div class="datei">
+        <code>BRIEFING.md</code>
+        <p>{{f1_desc}}</p>
+        <div class="dauer">{{f1_lives}}</div>
+      </div>
+      <div class="datei">
+        <code>DECISIONS.md</code>
+        <p>{{f2_desc}}</p>
+        <div class="dauer">{{f2_lives}}</div>
+      </div>
+      <div class="datei">
+        <code>HANDOFF_vNN.md</code>
+        <p>{{f3_desc}}</p>
+        <div class="dauer">{{f3_lives}}</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>{{h_runs}}</h2>
+    <div class="gate">
+      <b>{{gate_title}}</b> &nbsp;<span>{{gate_text}}</span>
+    </div>
+    <div class="phasen">
+      <div class="phase"><div class="nr">1</div><div><b>{{p1_name}}</b><span>{{p1_desc}}</span></div></div>
+      <div class="phase"><div class="nr">2</div><div><b>{{p2_name}}</b><span>{{p2_desc}}</span></div></div>
+      <div class="phase"><div class="nr">3</div><div><b>{{p3_name}}</b><span>{{p3_desc}}</span></div></div>
+      <div class="phase"><div class="nr">4</div><div><b>{{p4_name}}</b><span>{{p4_desc}}</span></div></div>
+      <div class="phase"><div class="nr">5</div><div><b>{{p5_name}}</b><span>{{p5_desc}}</span></div></div>
+      <div class="phase"><div class="nr">6</div><div><b>{{p6_name}}</b><span>{{p6_desc}}</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>{{h_install}}</h2>
+    <div class="zwei">
+      <pre><span class="c">{{code_comment}}</span>
+git clone --depth 1 https://github.com/Dennismit2n/create-masterprompt.git
+mkdir -p ~/.claude/skills
+cp -r create-masterprompt ~/.claude/skills/
+rm -rf ~/.claude/skills/create-masterprompt/.git</pre>
+      <div class="hinweis">
+        {{hint_claudeai}}<br><br>
+        {{hint_then}}
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>{{footer}}</div>
+    <div class="fam"><i style="background:#2439B2"></i><i style="background:#8FD3F4"></i><i style="background:#7872A8"></i></div>
+  </footer>
+</div>
+</html>

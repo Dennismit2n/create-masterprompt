@@ -6,3 +6,7 @@
 # andere hier landet per `git clone --depth 1` im Skill-Ordner jedes Nutzers.
 # Die GitHub-Vorschau wird von Hand in den Repo-Einstellungen hochgeladen.
 promo/
+
+# Zwischenstaende der Bild-Werkzeugkette, fertige Bilder liegen in docs/
+tools/uebersicht/index-*.html
+tools/uebersicht/uebersicht-*.png

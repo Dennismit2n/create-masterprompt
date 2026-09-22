@@ -155,8 +155,10 @@ create-masterprompt/
 │   └── template-profile.md
 ├── evals/
 │   └── trigger-evals.json          # 20 queries for description tuning
-└── docs/
-    └── uebersicht-<lang>.png       # one-page overview, 14 languages (export-ignore)
+├── docs/
+│   └── uebersicht-<lang>.png       # one-page overview, 14 languages (export-ignore)
+└── tools/
+    └── uebersicht/                 # build chain for those images (export-ignore)
 ```
 
 ## Contributing
