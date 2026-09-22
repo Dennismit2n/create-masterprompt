@@ -16,7 +16,7 @@
 
 - **Thirteen translations instead of one.** `SKILL.<lang>.md` now exists for
   es, fr, it, nl, pl, pt, tr, ru, hi, zh, ja and ko alongside de — the same
-  fourteen languages the workshop's start page speaks. Each was translated
+  fourteen languages the workshop’s start page speaks. Each was translated
   from the English original by one agent and then checked against it,
   section by section, by a second one that fixed what it found in place;
   every reviewer found something, from a pronoun with the wrong referent
@@ -38,7 +38,7 @@
 
 - Added a status note to the README and to `SKILL.de.md`: this is an early
   release. The text has had repeated consistency and spec-compliance passes,
-  but the skill hasn't run on many real, varied projects yet — the size gate,
+  but the skill hasn’t run on many real, varied projects yet — the size gate,
   the phase sequence and the templates are still short on real mileage. Says
   so plainly and points at issues rather than letting silence imply more
   confidence than is warranted.
@@ -98,7 +98,7 @@
   three English siblings. Renamed to `template-handoff.md`. Phase 6 also hard-coded
   the German output name `UEBERGABE_vNN.md` while the README promised
   `HANDOFF_vNN.md`; the artifact table now lists the English names once, and the
-  rule "name them in the user's language" underneath does the rest.
+  rule "name them in the user’s language" underneath does the rest.
 - **`assets/template-decisions.md` was never referenced** from anywhere, so no agent
   would ever have loaded it. Phase 3 points at it now. Its placeholders were written
   as `<angle brackets>` and were being swallowed as HTML tags by Markdown renderers;
@@ -108,7 +108,7 @@
 - **The install instructions copied `.git` into the skills folder** — 43 files instead
   of 15. Shallow clone plus an explicit removal.
 - **`.skill` is not a real extension.** Neither the Agent Skills specification nor
-  Anthropic's documentation defines one; claude.ai takes a zip. The release asset and
+  Anthropic’s documentation defines one; claude.ai takes a zip. The release asset and
   the README say `.zip` now, with the requirement that the archive has the skill
   folder as its root.
 - `references/model-routing.md` referred to "the class above Frontier" without ever

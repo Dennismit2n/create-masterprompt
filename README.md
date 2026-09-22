@@ -8,9 +8,9 @@ Works in Claude Code, claude.ai, and any client that supports the SKILL.md
 standard.
 
 > **Status: early release.** The text has been through repeated internal
-> consistency and spec-compliance passes, but the skill itself hasn't run on
+> consistency and spec-compliance passes, but the skill itself hasn’t run on
 > many real, varied projects yet. If the size gate, the phase sequence, or a
-> template doesn't fit how you actually work, that's useful signal — please
+> template doesn’t fit how you actually work, that’s useful signal — please
 > open an issue.
 
 ## The problem
@@ -44,7 +44,7 @@ A size gate first, then six phases: **research → briefing → decision intervi
 **Fourteen languages.** `SKILL.md` is the English original and the only file
 the program reads. Every other language has a full human-readable translation
 with the same fourteen sections, and every language has a one-page overview
-image — the same fourteen the workshop's start page speaks:
+image — the same fourteen the workshop’s start page speaks:
 
 | Language | Translation | Overview |
 |---|---|---|
