@@ -12,6 +12,8 @@ CODES = sys.argv[1:] or sorted(
 KEYS = ['unter', 'band_kind', 'band_lang', 'lead',
         'h_produce', 'f1_desc', 'f1_lives', 'f2_desc', 'f2_lives', 'f3_desc', 'f3_lives',
         'h_runs', 'gate_title', 'gate_text',
+        'depth_title', 'depth_note', 'q1_name', 'q1_text', 'q2_name', 'q2_text',
+        'q3_name', 'q3_text', 'q4_name', 'q4_text',
         'p1_name', 'p1_desc', 'p2_name', 'p2_desc', 'p3_name', 'p3_desc',
         'p4_name', 'p4_desc', 'p5_name', 'p5_desc', 'p6_name', 'p6_desc',
         'h_install', 'code_comment', 'hint_claudeai', 'hint_then', 'footer']
@@ -20,11 +22,14 @@ BUDGET = {'unter': 60, 'band_kind': 30, 'band_lang': 30, 'lead': 420,
           'h_produce': 28, 'h_runs': 28, 'h_install': 28,
           'f1_desc': 110, 'f2_desc': 110, 'f3_desc': 110,
           'f1_lives': 34, 'f2_lives': 34, 'f3_lives': 34,
-          'gate_title': 30, 'gate_text': 150,
+          'gate_title': 30, 'gate_text': 150, 'depth_title': 30, 'depth_note': 90,
           'code_comment': 50, 'hint_claudeai': 190, 'hint_then': 190, 'footer': 170}
 for i in range(1, 7):
     BUDGET['p%d_name' % i] = 26
     BUDGET['p%d_desc' % i] = 80
+for i in range(1, 5):
+    BUDGET['q%d_name' % i] = 26
+    BUDGET['q%d_text' % i] = 80
 
 # **x** -> <strong>/<b>, `x` -> <code>; vorher HTML-escapen, damit & < > in
 # Uebersetzungen nichts zerlegen. Ost-asiatische Sprachen brauchen keinen

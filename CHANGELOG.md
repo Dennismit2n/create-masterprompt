@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased
+
+- **Overview images show the depth questions.** A “Deeper, not bigger” band
+  sits under the size gate with all four questions, and phase 5 now says the
+  stop condition is checked from outside — in all fourteen languages. The
+  template gains ten string keys (`depth_*`, `q1`–`q4`), each with a length
+  budget in `bau-tafeln.py`.
+- **Cleaner line breaks on every image.** No single word is left alone on a
+  last line any more (`text-wrap: pretty`, `balance` for the file cards and
+  the four questions); Korean breaks at spaces instead of between syllables,
+  Japanese at phrase boundaries. Checked by measuring every wrapped line in
+  all fourteen languages, not by eye alone.
+
 ## 1.8.0
 
 - **Deeper, not bigger.** Phase 1 now opens with four questions about the

@@ -6,6 +6,7 @@
   :root{
     --bg:#0D1226; --panel:#141B36; --text:#E6E9F7; --soft:#A29CCB;
     --border:#263056; --royal:#2439B2; --ice:#8FD3F4; --rost:#fb923c; --rost-tief:#7c2d12;
+    --eis-tief:#14344d;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);font:16px/1.55 "Segoe UI",system-ui,sans-serif;color:var(--text)}
@@ -35,6 +36,20 @@
         border-left:3px solid var(--rost);border-radius:0 10px 10px 0;padding:13px 18px;margin-bottom:14px}
   .gate b{color:var(--rost)}
   .gate span{color:var(--soft);font-size:14px}
+
+  .tiefe{background:linear-gradient(90deg,var(--eis-tief),transparent 75%);
+         border-left:3px solid var(--ice);border-radius:0 10px 10px 0;padding:13px 18px 15px;margin-bottom:16px}
+  .tiefe-kopf b{color:var(--ice)}
+  .tiefe-kopf span{color:var(--soft);font-size:14px}
+  .fragen{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px;align-items:start}
+  .fragen b{display:block;font-size:14px}
+  .fragen span{display:block;color:var(--soft);font-size:13.5px;line-height:1.45;margin-top:2px;text-wrap:balance}
+  /* keine einzelnen Woerter in der letzten Zeile, in allen vierzehn Sprachen */
+  .lead,.gate,.tiefe-kopf,.phase span,.hinweis{text-wrap:pretty}
+  .datei p{text-wrap:balance}
+  /* Koreanisch bricht an Leerzeichen, nicht zwischen Silben; Japanisch nach Sinneinheiten */
+  :lang(ko) body{word-break:keep-all}
+  :lang(ja) body{word-break:auto-phrase}
 
   .phasen{display:grid;grid-template-columns:repeat(2,1fr);gap:11px 18px}
   .phase{display:flex;gap:13px;align-items:baseline}
@@ -110,6 +125,15 @@
     <h2>{{h_runs}}</h2>
     <div class="gate">
       <b>{{gate_title}}</b> &nbsp;<span>{{gate_text}}</span>
+    </div>
+    <div class="tiefe">
+      <div class="tiefe-kopf"><b>{{depth_title}}</b> &nbsp;<span>{{depth_note}}</span></div>
+      <div class="fragen">
+        <div><b>{{q1_name}}</b><span>{{q1_text}}</span></div>
+        <div><b>{{q2_name}}</b><span>{{q2_text}}</span></div>
+        <div><b>{{q3_name}}</b><span>{{q3_text}}</span></div>
+        <div><b>{{q4_name}}</b><span>{{q4_text}}</span></div>
+      </div>
     </div>
     <div class="phasen">
       <div class="phase"><div class="nr">1</div><div><b>{{p1_name}}</b><span>{{p1_desc}}</span></div></div>
