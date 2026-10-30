@@ -13,7 +13,7 @@ description: >-
   so it stops guessing. Not for one-off questions or single-file edits.
 license: MIT
 metadata:
-  version: "1.7.0"
+  version: "1.8.0"
   repository: https://github.com/Dennismit2n/create-masterprompt
 ---
 
@@ -43,7 +43,9 @@ Running six phases on a rename script is how people learn to skip the process
 entirely. Classify before starting:
 
 - **S — one sitting, reversible, no unknowns.** Skip to doing the work. Offer
-  the full track only if it grows.
+  the full track only if it grows. The four depth questions from phase 1 still
+  apply, silently: they take seconds, and a single task is what they were made
+  for. Name the outside check in your answer.
 - **M — a few sessions, some unknowns, one or two real forks.** Phases 1–3 and 5,
   plus 6 as soon as the work outlives one session. Briefing file, but short.
   No separate plan document.
@@ -54,6 +56,31 @@ Say which size you picked and why, in one sentence. If the user disagrees,
 they'll say so — that costs one message and saves an hour.
 
 ## Phase 1 — Research
+
+**Before the first search, make the request deeper, not bigger.** People ask
+for the version of a task they can already picture. Answer four questions
+about it first:
+
+1. **Standard.** What would a top professional in this field do here that the
+   request does not ask for?
+2. **Raw material.** What would they start from instead of something already
+   digested — specs, source code, datasets, measurements, the people affected?
+3. **Methods and tools.** Which specific, named methods and tools would they
+   use?
+4. **Outside check.** What, other than you or the user, would show the result
+   is right — a test, a validator, a measurement, someone actually using it?
+
+Rewrite the project goal to ask for exactly that and show it to the user in two
+or three sentences. Like the size verdict, it stands unless they object.
+Research then starts from the raw material in answer 2. All four answers go
+into the briefing; the outside check also becomes part of the definition of
+done.
+
+An answer that adds a new goal instead of raising the standard of the existing
+one is scope, not depth: it goes to anti-scope or into the decision interview.
+Ask what a professional would *do*, never how one would sound — the second is
+the role-prompt trap again. The four questions are adapted from Felix
+Rieseberg's essay "How to be more ambitious" (2026).
 
 Find out what already exists, where the gap is, what is technically feasible,
 and which pitfalls are already documented. **Research happens only here.**
@@ -126,6 +153,10 @@ Show the plan for approval before building.
 Work against a stated goal with a **checkable stop condition**. "Done when
 `npm test` passes and the app opens the vault folder" is checkable. "Done when
 it works well" is not.
+
+Checkable means something other than you does the checking: the outside check
+from phase 1. Rereading your own output and finding it fine is a model grading
+itself.
 
 - Test before feature where a test is meaningful.
 - Small commits, each one revertible on its own.

@@ -1,7 +1,32 @@
 # Changelog
 
-## Unreleased
+## 1.8.0
 
+- **Deeper, not bigger.** Phase 1 now opens with four questions about the
+  request before the first search: what a top professional would do here that
+  was not asked for, which raw material they would start from instead of
+  digested summaries, which named methods and tools they would use, and what
+  other than the assistant or the user would show the result is right. The
+  rewritten goal is shown to the user and stands unless they object. Anything
+  that adds a goal instead of raising the standard goes to anti-scope. Adapted,
+  in independent wording, from Felix Rieseberg’s essay *How to be more
+  ambitious: A tutorial for humans with models* (felixrieseberg.com, 13 October
+  2026); the source is credited in `references/prompt-techniques.md`.
+- **Small tasks get the questions too.** Size S still skips the phases, but
+  answers the four questions silently and names the outside check in the
+  reply — a single task is what the questions were made for. In a comparison
+  run on a one-page request, the old version handed over a draft with no way to
+  tell whether it works; the new one proposed one (two neighbours read it, cut
+  what they skipped). One run each, so indicative, not proof.
+- **Checkable means checked by something else.** Phase 5 now says that the
+  stop condition is checked by something other than the assistant: rereading
+  your own output and finding it fine is a model grading itself.
+- `assets/template-briefing.md` has a new section “Deeper, not bigger”, and the
+  definition of done names what checks each condition. Quality gates 0, 1, 2
+  and 5 check the new steps; `references/anti-patterns.md` gains “The shallow
+  brief”; the technique routing table gains a row for the depth questions.
+- All thirteen translations carry the new text; `pruefe-skills.py` confirms
+  the structure for all of them.
 - **Overview images without a version stamp.** The one-page overviews under
   `docs/` no longer show a version number, so they only need rebuilding when
   their content changes. Rebuilt for all fourteen languages.

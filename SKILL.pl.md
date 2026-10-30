@@ -2,7 +2,7 @@
 
 > Tłumaczenie `SKILL.md`. **Program czyta wyłącznie `SKILL.md`**, plik
 > angielski — ten tutaj służy ludziom do czytania. Gdy oba się ze sobą nie
-> zgadzają, obowiązuje wersja angielska. Stan: wersja 1.7.0.
+> zgadzają, obowiązuje wersja angielska. Stan: wersja 1.8.0.
 >
 > Nazwy plików, foldery i przykładowe polecenia celowo pozostały
 > nieprzetłumaczone, bo tak właśnie nazywają się na dysku.
@@ -40,7 +40,10 @@ Przepuszczanie skryptu do zmiany nazw przez sześć faz to sposób, w jaki ludzi
 uczą się pomijać cały proces. Zaklasyfikuj, zanim zaczniesz:
 
 - **S — jedno posiedzenie, odwracalne, bez niewiadomych.** Przejdź od razu do
-  pracy. Pełną ścieżkę zaproponuj tylko wtedy, gdy projekt urośnie.
+  pracy. Pełną ścieżkę zaproponuj tylko wtedy, gdy projekt urośnie. Cztery
+  pytania o głębię z fazy 1 nadal obowiązują, po cichu: zajmują sekundy, a
+  pojedyncze zadanie to dokładnie to, do czego powstały. Wymień sprawdzian z
+  zewnątrz w odpowiedzi.
 - **M — kilka sesji, trochę niewiadomych, jedno lub dwa prawdziwe
   rozwidlenia.** Fazy 1–3 i 5, plus 6, gdy tylko praca wykroczy poza jedną
   sesję. Plik briefingu, ale krótki. Bez osobnego dokumentu z planem.
@@ -51,6 +54,33 @@ Powiedz w jednym zdaniu, który rozmiar wybierasz i dlaczego. Jeśli użytkownik
 się nie zgadza, powie to — kosztuje to jedną wiadomość, a oszczędza godzinę.
 
 ## Faza 1 — Research
+
+**Przed pierwszym wyszukiwaniem pogłęb prośbę, zamiast ją powiększać.** Ludzie
+proszą o taką wersję zadania, jaką już potrafią sobie wyobrazić. Najpierw
+odpowiedz na cztery pytania na jej temat:
+
+1. **Standard.** Co zrobiłby tu czołowy profesjonalista w tej dziedzinie, czego
+   prośba nie obejmuje?
+2. **Surowy materiał.** Od czego by zaczął zamiast od czegoś już przetrawionego
+   — od specyfikacji, kodu źródłowego, zbiorów danych, pomiarów, ludzi, których
+   to dotyczy?
+3. **Metody i narzędzia.** Jakich konkretnych metod i narzędzi, wymienionych z
+   nazwy, by użył?
+4. **Sprawdzian z zewnątrz.** Co poza tobą lub użytkownikiem pokazałoby, że
+   wynik jest poprawny — test, walidator, pomiar, ktoś, kto faktycznie z tego
+   korzysta?
+
+Przepisz cel projektu tak, żeby prosił dokładnie o to, i pokaż go użytkownikowi
+w dwóch, trzech zdaniach. Podobnie jak wybór rozmiaru z fazy 0, nowy cel
+obowiązuje, dopóki użytkownik nie zaprotestuje. Research zaczyna się potem od
+surowego materiału z odpowiedzi 2. Wszystkie cztery odpowiedzi trafiają do
+briefingu; sprawdzian z zewnątrz staje się ponadto częścią Definition of Done.
+
+Odpowiedź, która dodaje nowy cel, zamiast podnosić standard istniejącego, to
+zakres, a nie głębia: trafia do anty-zakresu albo do wywiadu decyzyjnego.
+Pytaj, co profesjonalista by *zrobił*, nigdy jak by brzmiał — to drugie znów
+jest promptem z rolą. Cztery pytania są zaadaptowane z eseju Felixa Rieseberga
+„How to be more ambitious” (2026).
 
 Ustal, co już istnieje, gdzie jest luka, co jest technicznie wykonalne i które
 pułapki są już udokumentowane. **Research odbywa się tylko tutaj.** Research
@@ -129,6 +159,10 @@ Pokaż plan do zatwierdzenia, zanim zaczniesz budować.
 Pracuj według wyraźnie nazwanego celu ze **sprawdzalnym warunkiem
 zakończenia**. „Gotowe, gdy `npm test` przechodzi i aplikacja otwiera folder
 sejfu” jest sprawdzalne. „Gotowe, gdy dobrze działa” — nie.
+
+Sprawdzalne oznacza, że sprawdza coś innego niż ty: sprawdzian z zewnątrz z
+fazy 1. Ponowne przeczytanie własnego wyniku i uznanie go za dobry to model,
+który sam sobie wystawia ocenę.
 
 - Najpierw test, potem funkcja — tam, gdzie test ma sens.
 - Małe commity, każdy z osobna możliwy do cofnięcia.

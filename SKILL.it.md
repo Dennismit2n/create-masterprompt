@@ -2,7 +2,7 @@
 
 > Traduzione di `SKILL.md`. **Il programma legge esclusivamente `SKILL.md`**,
 > il file inglese — questa versione serve alle persone, per la consultazione.
-> Se le due si contraddicono, fa fede quella inglese. Stato: versione 1.7.0.
+> Se le due si contraddicono, fa fede quella inglese. Stato: versione 1.8.0.
 >
 > Nomi di file, cartelle e comandi d'esempio restano di proposito non tradotti,
 > perché è così che si chiamano sul disco.
@@ -41,7 +41,10 @@ Far girare sei fasi su uno script di rinomina è il modo in cui la gente impara
 a saltare del tutto il processo. Classifica prima di partire:
 
 - **S — una sola seduta, reversibile, nessuna incognita.** Passa direttamente
-  al lavoro. Proponi il percorso completo solo se cresce.
+  al lavoro. Proponi il percorso completo solo se cresce. Le quattro domande di
+  profondità della fase 1 valgono comunque, in silenzio: richiedono pochi
+  secondi, e un singolo compito è proprio ciò per cui sono nate. Nomina la
+  verifica esterna nella risposta.
 - **M — qualche sessione, alcune incognite, uno o due bivi veri.** Fasi 1–3 e
   5, più la 6 non appena il lavoro supera una sessione. File di briefing, ma
   breve. Nessun documento di piano separato.
@@ -52,6 +55,34 @@ Di' in una frase quale dimensione hai scelto e perché. Se l'utente non è
 d'accordo, lo dirà — costa un messaggio e risparmia un'ora.
 
 ## Fase 1 — Ricerca
+
+**Prima di avviare la prima ricerca, rendi la richiesta più profonda, non più
+grande.** Le persone chiedono la versione di un compito che riescono già a
+immaginare. Rispondi innanzitutto a quattro domande su di essa:
+
+1. **Standard.** Che cosa farebbe qui un professionista di alto livello del
+   settore che la richiesta non chiede?
+2. **Materia prima.** Da che cosa partirebbe invece che da qualcosa di già
+   digerito: specifiche, codice sorgente, dataset, misurazioni, le persone
+   coinvolte?
+3. **Metodi e strumenti.** Quali metodi e strumenti specifici, chiamati per
+   nome, userebbe?
+4. **Verifica esterna.** Che cosa, al di fuori di te e dell'utente, mostrerebbe
+   che il risultato è giusto: un test, un validatore, una misurazione, qualcuno
+   che lo usa davvero?
+
+Riscrivi l'obiettivo del progetto perché chieda esattamente questo e mostralo
+all'utente in due o tre frasi. Come la scelta della dimensione nella fase 0,
+vale finché l'utente non obietta. La ricerca parte poi dalla materia prima
+della risposta 2. Tutte e quattro le risposte finiscono nel briefing; la
+verifica esterna entra inoltre nella definition of done.
+
+Una risposta che aggiunge un obiettivo nuovo invece di alzare lo standard di
+quello esistente riguarda lo scope, non la profondità: va nell'anti-scope o
+nell'intervista decisionale. Chiedi che cosa *farebbe* un professionista, mai
+come si esprimerebbe: la seconda cosa è di nuovo un prompt di ruolo. Le quattro
+domande sono adattate dal saggio di Felix Rieseberg «How to be more ambitious»
+(2026).
 
 Scopri cosa esiste già, dov'è il vuoto, cosa è tecnicamente fattibile e quali
 insidie sono già documentate. **La ricerca avviene solo qui.** Fare ricerca a
@@ -134,6 +165,10 @@ Mostra il piano per l'approvazione prima di costruire.
 Lavora contro un obiettivo dichiarato con una **condizione di stop
 verificabile**. «Fatto quando `npm test` passa e l'app apre la cartella del
 vault» è verificabile. «Fatto quando funziona bene» non lo è.
+
+Verificabile significa che a verificare è qualcosa di diverso da te: la
+verifica esterna della fase 1. Rileggere il proprio output e trovarlo buono è
+un modello che si dà il voto da solo.
 
 - Test prima della funzionalità, dove un test ha senso.
 - Commit piccoli, ciascuno annullabile da solo.

@@ -20,10 +20,22 @@ achieve. Written so someone who has never heard of the project understands it.>
 <The actual reason. What is missing, or what is annoying about the alternatives.
 This is what decides the close calls later.>
 
+## Deeper, not bigger
+
+From the four questions at the start of research. What raises the standard of
+this project without widening it.
+
+- **Standard:** `<what a top professional would do here that was not asked for>`
+- **Start from:** `<raw material — specs, source code, datasets, the people affected>`
+- **Methods and tools:** `<specific and named>`
+- **Outside check:** `<what, other than the assistant or the user, shows it is right>`
+
 ## Definition of done — whole project
 
 <Observable conditions. "Runs on Windows and Android, opens a folder, edits a
-file, survives a restart." Not "works well".>
+file, survives a restart." Not "works well". Each condition names what checks
+it — a test, a validator, a measurement, a real user — never the assistant
+rereading its own work.>
 
 ## Anti-scope
 

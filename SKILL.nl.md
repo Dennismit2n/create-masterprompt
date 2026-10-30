@@ -2,7 +2,7 @@
 
 > Vertaling van `SKILL.md`. **Het programma leest uitsluitend `SKILL.md`**, het
 > Engelse bestand — deze versie is om na te lezen, voor mensen. Spreken de twee
-> elkaar tegen, dan is de Engelse leidend. Bijgewerkt tot versie 1.7.0.
+> elkaar tegen, dan is de Engelse leidend. Bijgewerkt tot versie 1.8.0.
 >
 > Bestandsnamen, mappen en voorbeeldcommando’s staan bewust onvertaald, omdat
 > ze zo op de schijf heten.
@@ -41,7 +41,10 @@ Zes fasen loslaten op een hernoemscript is precies hoe mensen leren het proces
 helemaal over te slaan. Classificeer voordat je begint:
 
 - **S — één zitting, omkeerbaar, geen onbekenden.** Ga meteen aan het werk.
-  Bied het volledige traject alleen aan als het groter wordt.
+  Bied het volledige traject alleen aan als het groter wordt. De vier
+  dieptevragen uit fase 1 gelden nog steeds, in stilte: ze kosten seconden, en
+  een losse taak is precies waarvoor ze bedoeld zijn. Noem de controle van
+  buitenaf in je antwoord.
 - **M — een paar sessies, enkele onbekenden, één of twee echte tweesprongen.**
   Fasen 1–3 en 5, plus 6 zodra het werk langer duurt dan één sessie.
   Briefingbestand, maar kort. Geen apart plandocument.
@@ -52,6 +55,33 @@ Zeg in één zin welke grootte je hebt gekozen en waarom. Als de gebruiker het e
 niet mee eens is, zegt hij dat wel — dat kost één bericht en bespaart een uur.
 
 ## Fase 1 — Onderzoek
+
+**Maak het verzoek vóór de eerste zoekopdracht dieper, niet groter.** Mensen
+vragen om de versie van een taak die ze zich al kunnen voorstellen. Beantwoord
+er eerst vier vragen over:
+
+1. **Maatstaf.** Wat zou een topprofessional in dit vakgebied hier doen waar
+   het verzoek niet om vraagt?
+2. **Ruw materiaal.** Waar zou die van uitgaan in plaats van iets wat al is
+   voorgekauwd: specificaties, broncode, datasets, metingen, de mensen om wie
+   het gaat?
+3. **Methoden en tools.** Welke concrete, bij naam genoemde methoden en tools
+   zou die gebruiken?
+4. **Controle van buitenaf.** Wat, behalve jij of de gebruiker, zou laten zien
+   dat het resultaat klopt: een test, een validator, een meting, iemand die het
+   echt gebruikt?
+
+Herschrijf het projectdoel zo dat het precies daarom vraagt en laat het de
+gebruiker in twee of drie zinnen zien. Net als de omvangskeuze uit fase 0 geldt
+het zolang de gebruiker geen bezwaar maakt. Het onderzoek begint daarna bij het
+ruwe materiaal uit antwoord 2. Alle vier antwoorden gaan de briefing in; de
+controle van buitenaf wordt bovendien deel van de definition of done.
+
+Een antwoord dat een nieuw doel toevoegt in plaats van de maatstaf van het
+bestaande doel te verhogen, is scope, geen diepte: het hoort in de anti-scope
+of in het beslisinterview. Vraag wat een professional zou *doen*, nooit hoe die
+zou klinken — dat tweede is opnieuw een rolinstructie. De vier vragen zijn
+ontleend aan het essay “How to be more ambitious” van Felix Rieseberg (2026).
 
 Zoek uit wat er al bestaat, waar het gat zit, wat technisch haalbaar is en welke
 valkuilen al gedocumenteerd zijn. **Onderzoek gebeurt alleen hier.** Onderzoek
@@ -133,6 +163,10 @@ Laat het plan ter goedkeuring zien voordat je gaat bouwen.
 Werk naar een uitgesproken doel met een **controleerbare stopconditie**.
 “Klaar als `npm test` slaagt en de app de kluismap opent” is controleerbaar.
 “Klaar als het goed werkt” is dat niet.
+
+Controleerbaar betekent dat iets anders dan jij de controle doet: de controle
+van buitenaf uit fase 1. Je eigen uitvoer herlezen en goed vinden is een model
+dat zichzelf een cijfer geeft.
 
 - Test vóór feature waar een test zinvol is.
 - Kleine commits, elk op zichzelf terug te draaien.

@@ -68,7 +68,16 @@ because only running software gives feedback.
 **Symptom:** Arguments about whether a milestone is finished. **Cause:** The
 definition of done was a mood, not a condition. **Fix:** Write it as something
 that can be observed: a command that exits zero, a screen that opens, a file
-that appears.
+that appears. And let something other than the assistant do the observing — a
+model rereading its own output agrees with itself.
+
+### The shallow brief
+**Symptom:** The result does exactly what was asked and still looks amateur
+next to what a professional would have built. **Cause:** The request was taken
+at the level the user could already picture, and research started from
+summaries. **Fix:** The four depth questions at the start of phase 1 — standard,
+raw material, methods and tools, outside check. Deeper, not bigger: anything
+that adds a goal goes to anti-scope.
 
 ### The role-prompt trap
 **Symptom:** The master prompt opens with "You are a world-class expert…" and

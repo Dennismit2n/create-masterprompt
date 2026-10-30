@@ -2,7 +2,7 @@
 
 > Übersetzung von `SKILL.md`. **Gelesen wird vom Programm ausschließlich
 > `SKILL.md`**, die englische Datei — diese hier ist zum Nachlesen für Menschen.
-> Wenn sich beide widersprechen, gilt die englische. Stand: Version 1.7.0.
+> Wenn sich beide widersprechen, gilt die englische. Stand: Version 1.8.0.
 >
 > Dateinamen, Ordner und Beispielbefehle stehen absichtlich unübersetzt, weil
 > sie so auf der Festplatte heißen.
@@ -42,7 +42,10 @@ Sechs Phasen auf ein Umbenennungs-Skript loszulassen ist der Weg, auf dem
 Leute lernen, den Ablauf ganz zu überspringen. Also vorher einordnen:
 
 - **S — eine Sitzung, umkehrbar, keine Unbekannten.** Direkt arbeiten. Den
-  vollen Ablauf nur anbieten, wenn es größer wird.
+  vollen Ablauf nur anbieten, wenn es größer wird. Die vier Tiefenfragen aus
+  Phase 1 gelten trotzdem, still im Kopf: Sie kosten Sekunden, und genau für
+  eine einzelne Aufgabe sind sie gemacht. Die Prüfung von außen in der Antwort
+  benennen.
 - **M — ein paar Sitzungen, einige Unbekannte, ein oder zwei echte
   Gabelungen.** Phasen 1–3 und 5, dazu 6, sobald die Arbeit über eine Sitzung
   hinausgeht. Briefing-Datei, aber kurz. Kein eigenes Plandokument.
@@ -54,6 +57,34 @@ anderer Meinung ist, sagt er es — das kostet eine Nachricht und spart eine
 Stunde.
 
 ## Phase 1 — Recherche
+
+**Vor der ersten Suche die Anfrage tiefer machen, nicht größer.** Menschen
+bitten um die Fassung einer Aufgabe, die sie sich schon vorstellen können.
+Deshalb zuerst vier Fragen dazu beantworten:
+
+1. **Maßstab.** Was würde ein Spitzenprofi auf diesem Gebiet hier tun, wonach
+   die Anfrage gar nicht fragt?
+2. **Rohmaterial.** Wovon würde er ausgehen statt von schon Vorverdautem —
+   Spezifikationen, Quellcode, Datensätzen, Messungen, den betroffenen
+   Menschen?
+3. **Methoden und Werkzeuge.** Welche konkreten, benannten Methoden und
+   Werkzeuge würde er einsetzen?
+4. **Prüfung von außen.** Was, außer dir oder dem Nutzer, würde zeigen, dass
+   das Ergebnis stimmt — ein Test, ein Validator, eine Messung, jemand, der es
+   tatsächlich benutzt?
+
+Das Projektziel so umschreiben, dass es genau danach fragt, und es dem Nutzer
+in zwei, drei Sätzen zeigen. Wie die Größeneinstufung aus Phase 0 gilt es,
+solange er nicht widerspricht. Die Recherche beginnt dann beim Rohmaterial aus
+Antwort 2. Alle vier Antworten kommen ins Briefing; die Prüfung von außen wird
+außerdem Teil der Definition of Done.
+
+Eine Antwort, die ein neues Ziel hinzufügt, statt den Maßstab des bestehenden
+zu heben, ist Umfang, nicht Tiefe: Sie gehört ins Anti-Scope oder ins
+Entscheidungs-Interview. Frag, was ein Profi *tun* würde, nie, wie einer
+klingen würde — das Zweite wäre wieder bloß eine Rollenanweisung. Die vier
+Fragen sind angelehnt an Felix Riesebergs Essay „How to be more ambitious“
+(2026).
 
 Herausfinden, was es schon gibt, wo die Lücke ist, was technisch machbar ist
 und welche Fallstricke bereits dokumentiert sind. **Recherchiert wird nur
@@ -139,6 +170,10 @@ Den Plan vor dem Bauen zur Abnahme zeigen.
 Gegen ein ausgesprochenes Ziel mit einer **prüfbaren Abbruchbedingung**
 arbeiten. „Fertig, wenn `npm test` durchläuft und die App den Tresor-Ordner
 öffnet“ ist prüfbar. „Fertig, wenn es gut funktioniert“ ist es nicht.
+
+Prüfbar heißt: Etwas anderes als du übernimmt das Prüfen — die Prüfung von
+außen aus Phase 1. Die eigene Ausgabe noch einmal zu lesen und für gut zu
+befinden, heißt nur, dass ein Modell sich selbst benotet.
 
 - Test vor Funktion, wo ein Test sinnvoll ist.
 - Kleine Commits, jeder für sich zurücknehmbar.

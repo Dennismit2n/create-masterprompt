@@ -124,10 +124,14 @@ Three things none of the others do:
 3. **Handoff as a first-class artefact.** Written *before* the context limit,
    not recovered after compaction has already eaten the expensive details.
 
-Plus an **improvement pass** (a silent critique round at every phase boundary —
-about 30 % extra cost, the best return in the skill), a **rewind rule** (revised decisions must update the files, not just the
-chat) and an **exit rule** (three sessions with no output means shrink, park,
-or stop — parking is a legitimate outcome, pretending is not).
+Plus **four depth questions** before any research (what a top professional
+would do here, what raw material they would start from, which methods and
+tools they would use, and what other than you or the assistant proves the
+result right — deeper, not bigger), an **improvement pass** (a silent critique
+round at every phase boundary — about 30 % extra cost, the best return in the
+skill), a **rewind rule** (revised decisions must update the files, not just
+the chat) and an **exit rule** (three sessions with no output means shrink,
+park, or stop — parking is a legitimate outcome, pretending is not).
 
 ## Make it yours
 

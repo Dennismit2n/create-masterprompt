@@ -3,7 +3,7 @@
 > Traduction de `SKILL.md`. **Le programme lit exclusivement `SKILL.md`**, le
 > fichier anglais — celui-ci est là pour la lecture humaine. Si les deux se
 > contredisent, c'est la version anglaise qui fait foi. Correspond à la
-> version 1.7.0.
+> version 1.8.0.
 >
 > Les noms de fichiers, les dossiers et les commandes d'exemple sont laissés
 > volontairement en anglais, parce que c'est ainsi qu'ils s'appellent sur le
@@ -44,7 +44,10 @@ Dérouler six phases sur un script de renommage, c'est comme ça que les gens
 apprennent à sauter tout le processus. Classe avant de commencer :
 
 - **S — une seule séance, réversible, aucune inconnue.** Passe directement au
-  travail. Ne propose le parcours complet que si ça grossit.
+  travail. Ne propose le parcours complet que si ça grossit. Les quatre
+  questions de profondeur de la phase 1 s'appliquent quand même, en silence :
+  elles prennent quelques secondes, et une tâche isolée est précisément ce pour
+  quoi elles ont été faites. Nomme la vérification extérieure dans ta réponse.
 - **M — quelques sessions, quelques inconnues, une ou deux vraies
   bifurcations.** Phases 1–3 et 5, plus la 6 dès que le travail dépasse une
   session. Fichier de briefing, mais court. Pas de document de plan séparé.
@@ -55,6 +58,34 @@ Dis en une phrase quelle taille tu as choisie et pourquoi. Si l'utilisateur
 n'est pas d'accord, il le dira — ça coûte un message et épargne une heure.
 
 ## Phase 1 — Recherche
+
+**Avant la première recherche, rends la demande plus profonde, pas plus
+grande.** On demande la version d'une tâche qu'on arrive déjà à se représenter.
+Réponds d'abord à quatre questions à son sujet :
+
+1. **Exigence.** Que ferait ici un professionnel de haut niveau de ce domaine
+   que la demande ne réclame pas ?
+2. **Matière brute.** De quoi partirait-il au lieu de quelque chose de déjà
+   digéré — spécifications, code source, jeux de données, mesures, les
+   personnes concernées ?
+3. **Méthodes et outils.** Quelles méthodes et quels outils précis, désignés
+   par leur nom, utiliserait-il ?
+4. **Vérification extérieure.** Qu'est-ce qui, en dehors de toi ou de
+   l'utilisateur, montrerait que le résultat est juste — un test, un
+   validateur, une mesure, quelqu'un qui s'en sert vraiment ?
+
+Réécris l'objectif du projet pour qu'il demande exactement cela et montre-le à
+l'utilisateur en deux ou trois phrases. Comme le choix de taille de la phase 0,
+il tient tant que l'utilisateur ne s'y oppose pas. La recherche part ensuite de
+la matière brute de la réponse 2. Les quatre réponses vont dans le briefing ;
+la vérification extérieure entre en plus dans la definition of done.
+
+Une réponse qui ajoute un nouvel objectif au lieu d'élever l'exigence de
+l'objectif existant relève du périmètre, pas de la profondeur : elle va dans
+l'anti-scope ou dans l'entretien de décision. Demande ce qu'un professionnel
+*ferait*, jamais comment il s'exprimerait — le second cas, c'est de nouveau une
+instruction de rôle. Les quatre questions sont adaptées de l'essai de Felix
+Rieseberg « How to be more ambitious » (2026).
 
 Découvre ce qui existe déjà, où est le manque, ce qui est techniquement
 faisable et quels pièges sont déjà documentés. **La recherche n'a lieu
@@ -141,6 +172,10 @@ Montre le plan pour validation avant de construire.
 Travaille vers un objectif énoncé avec une **condition d'arrêt vérifiable**.
 « Fini quand `npm test` passe et que l'application ouvre le dossier du
 coffre » est vérifiable. « Fini quand ça marche bien » ne l'est pas.
+
+Vérifiable veut dire que la vérification est faite par autre chose que toi : la
+vérification extérieure de la phase 1. Relire ta propre production et la
+trouver bonne, c'est un modèle qui se note lui-même.
 
 - Le test avant la fonctionnalité, là où un test a du sens.
 - Des petits commits, chacun réversible à lui seul.

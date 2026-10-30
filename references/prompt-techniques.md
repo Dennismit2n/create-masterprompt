@@ -31,6 +31,7 @@ and it cuts more than people expect.
 | Facts are missing before anything can be decided | **Generate-knowledge** | 1 → 2 |
 | Several viable paths that constrain each other, backtracking likely | **Tree-of-thoughts** | 3, 4 |
 | A first attempt exists and is visibly not good enough | **Reflexion** | every phase boundary |
+| The request is clear but shallow: it names an outcome, not the standard a professional would hold it to | **Depth questions** (see `SKILL.md`, phase 1) | 1 |
 
 More than two techniques at once is nearly always over-prompting.
 
@@ -131,6 +132,15 @@ The descriptions here are independently written and cut down to this method —
 deliberately not a reimplementation. The technique names are terms of art from
 the literature (chain-of-thought: Wei et al. · ReAct and tree-of-thoughts: Yao
 et al. · reflexion: Shinn et al.), not protected material.
+
+The depth questions at the start of phase 1 are adapted, in independent
+wording, from Felix Rieseberg's essay *How to be more ambitious: A tutorial for
+humans with models* (felixrieseberg.com, 13 October 2026). The essay offers
+them as a paragraph you paste before a task so the model rewrites your prompt;
+here they run as a fixed step before research. Two of its warnings carry over
+unchanged: ask the model to do what an expert does rather than to sound like
+one, and let something other than the model judge the result — ideally a tool
+it can run.
 
 If you need the full catalogue, install the original — it runs alongside this
 skill without conflict. What you have here is the selection plus routing; what

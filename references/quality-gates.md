@@ -10,10 +10,18 @@ get skipped under time pressure, which is exactly when they matter.
 
 - [ ] Size classified as S, M or L, stated in one sentence with a reason
 - [ ] For S: full track explicitly offered and declined, or not needed
+- [ ] For S: depth questions answered silently, outside check named in the
+      answer
 - [ ] Track matches size — no six-phase ceremony on a one-sitting task
 
 ## Gate 1 — Research
 
+- [ ] The four depth questions were answered before the first search, and the
+      deeper goal was shown to the user
+- [ ] Research started from the raw material those answers named, not from
+      summaries of it
+- [ ] Nothing the depth questions surfaced widened the goal; new goals went to
+      anti-scope or the decision interview
 - [ ] Comparison table has no empty cells for shortlisted options
 - [ ] Every pitfall line carries a source or is marked as an assumption
 - [ ] Two consecutive searches produced nothing new (saturation), or the gap is
@@ -29,6 +37,8 @@ read sources that agree.
 
 - [ ] A fresh session with zero history could start from this file alone
 - [ ] Anti-scope section exists, with a reason per non-goal
+- [ ] "Deeper, not bigger" is filled in, and its outside check reappears in the
+      definition of done
 - [ ] Assumption register exists and is non-empty (an empty one means
       undocumented assumptions, not none)
 - [ ] Current status is at the top, not buried
@@ -58,7 +68,8 @@ read sources that agree.
 
 ## Gate 5 — Build
 
-- [ ] Goal has a checkable stop condition
+- [ ] Goal has a checkable stop condition, and something other than the
+      assistant or the user does the checking
 - [ ] Commits are small and individually revertible
 - [ ] Tests exist where they are meaningful, before the feature
 - [ ] No permission-asking pauses; questions only on genuine design forks

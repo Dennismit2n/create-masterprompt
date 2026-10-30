@@ -2,7 +2,7 @@
 
 > `SKILL.md` dosyasının çevirisi. **Program yalnızca `SKILL.md` dosyasını
 > okur**, yani İngilizce olanı — bu dosya insanların okuması içindir. İkisi
-> çelişirse İngilizce olan geçerlidir. Sürüm 1.7.0 itibarıyla günceldir.
+> çelişirse İngilizce olan geçerlidir. Sürüm 1.8.0 itibarıyla günceldir.
 >
 > Dosya adları, klasörler ve örnek komutlar bilerek çevrilmedi; diskte bu
 > adlarla duruyorlar.
@@ -41,7 +41,9 @@ Bir yeniden adlandırma betiğine altı aşama uygulamak, insanların süreci t�
 atlamayı öğrendiği yoldur. Başlamadan önce sınıflandır:
 
 - **S — tek oturum, geri alınabilir, bilinmeyen yok.** Doğrudan işe geç. Tam
-  akışı yalnızca iş büyürse öner.
+  akışı yalnızca iş büyürse öner. Aşama 1'deki dört derinlik sorusu yine de
+  geçerlidir, sessizce: birkaç saniye sürer ve tam da tek bir iş için
+  tasarlanmıştır. Dışarıdan doğrulamayı yanıtında belirt.
 - **M — birkaç oturum, bazı bilinmeyenler, bir iki gerçek yol ayrımı.** Aşama
   1–3 ve 5; iş tek oturumu aşar aşmaz 6 da. Briefing dosyası var, ama kısa.
   Ayrı bir plan belgesi yok.
@@ -52,6 +54,33 @@ Hangi boyutu seçtiğini ve nedenini tek cümleyle söyle. Kullanıcı aynı fik
 değilse söyler — bu bir mesaja mal olur, bir saat kazandırır.
 
 ## Aşama 1 — Araştırma
+
+**İlk aramadan önce isteği büyütme, derinleştir.** İnsanlar bir işin,
+kafalarında zaten canlandırabildikleri hâlini ister. Önce bu istekle ilgili
+dört soruyu yanıtla:
+
+1. **Standart.** Bu alandaki üst düzey bir profesyonel burada, isteğin talep
+   etmediği neyi yapardı?
+2. **Ham malzeme.** Önceden sindirilmiş bir şey yerine hangi malzemeden yola
+   çıkardı — spesifikasyonlar, kaynak kod, veri setleri, ölçümler, işten
+   etkilenen insanlar?
+3. **Yöntemler ve araçlar.** Hangi somut, adıyla anılan yöntem ve araçları
+   kullanırdı?
+4. **Dışarıdan doğrulama.** Senden ya da kullanıcıdan başka ne, sonucun doğru
+   olduğunu gösterirdi — bir test, bir doğrulayıcı, bir ölçüm, onu gerçekten
+   kullanan biri?
+
+Proje hedefini tam olarak bunu isteyecek şekilde yeniden yaz ve kullanıcıya iki
+üç cümleyle göster. Aşama 0'daki boyut seçimi gibi, kullanıcı itiraz etmedikçe
+geçerlidir. Araştırma daha sonra 2. yanıttaki ham malzemeden başlar. Dört
+yanıtın hepsi briefing'e girer; dışarıdan doğrulama ayrıca bitti tanımının
+(Definition of Done) bir parçası olur.
+
+Mevcut hedefin standardını yükseltmek yerine yeni bir hedef ekleyen yanıt
+derinlik değil, kapsamdır: anti-scope'a ya da karar görüşmesine gider. Bir
+profesyonelin ne *yapacağını* sor, nasıl konuşacağını asla — ikincisi yine bir
+rol promptudur. Dört soru, Felix Rieseberg'in “How to be more ambitious” (2026)
+adlı denemesinden uyarlanmıştır.
 
 Neyin zaten var olduğunu, boşluğun nerede olduğunu, teknik olarak neyin
 yapılabilir olduğunu ve hangi tuzakların zaten belgelenmiş olduğunu bul.
@@ -131,6 +160,10 @@ edemeyeceği bir temel teslim eden üçünü yener.
 Açıkça belirtilmiş bir hedefe karşı, **denetlenebilir bir durma koşuluyla**
 çalış. “`npm test` geçtiğinde ve uygulama kasa klasörünü açtığında bitti”
 denetlenebilir. “İyi çalıştığında bitti” değildir.
+
+Denetlenebilir, denetimi senden başka bir şeyin yapması demektir: Aşama 1'deki
+dışarıdan doğrulama. Kendi çıktını yeniden okuyup iyi bulmak, bir modelin
+kendine not vermesidir.
 
 - Testin anlamlı olduğu yerde önce test, sonra özellik.
 - Küçük commit'ler, her biri tek başına geri alınabilir.

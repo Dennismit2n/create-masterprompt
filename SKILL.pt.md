@@ -2,7 +2,7 @@
 
 > Tradução de `SKILL.md`. **O programa lê exclusivamente `SKILL.md`**, o
 > ficheiro em inglês — esta versão existe para consulta humana. Se as duas se
-> contradisserem, vale a inglesa. Corresponde à versão 1.7.0.
+> contradisserem, vale a inglesa. Corresponde à versão 1.8.0.
 >
 > Nomes de ficheiros, pastas e comandos de exemplo ficam propositadamente sem
 > traduzir, porque é assim que se chamam no disco.
@@ -41,7 +41,10 @@ Correr seis fases num script de renomear é a forma como as pessoas aprendem a
 saltar o processo por completo. Classifica antes de começar:
 
 - **S — uma sentada, reversível, sem incógnitas.** Passa diretamente ao
-  trabalho. Oferece o percurso completo só se o projeto crescer.
+  trabalho. Oferece o percurso completo só se o projeto crescer. As quatro
+  perguntas de profundidade da fase 1 continuam a valer, em silêncio: levam
+  segundos, e uma tarefa isolada é exatamente aquilo para que foram feitas.
+  Indica a verificação externa na tua resposta.
 - **M — algumas sessões, algumas incógnitas, uma ou duas bifurcações reais.**
   Fases 1–3 e 5, mais a 6 assim que o trabalho ultrapassar uma sessão.
   Ficheiro de briefing, mas curto. Sem documento de plano separado.
@@ -52,6 +55,33 @@ Diz numa frase que tamanho escolheste e porquê. Se o utilizador discordar, vai
 dizê-lo — isso custa uma mensagem e poupa uma hora.
 
 ## Fase 1 — Pesquisa
+
+**Antes da primeira pesquisa, torna o pedido mais profundo, não maior.** As
+pessoas pedem a versão de uma tarefa que já conseguem imaginar. Responde
+primeiro a quatro perguntas sobre esse pedido:
+
+1. **Padrão.** O que faria aqui um profissional de topo nesta área que o pedido
+   não pede?
+2. **Matéria-prima.** De onde partiria, em vez de algo já digerido —
+   especificações, código-fonte, conjuntos de dados, medições, as pessoas
+   afetadas?
+3. **Métodos e ferramentas.** Que métodos e ferramentas concretos, com nome,
+   usaria?
+4. **Verificação externa.** O que, sem ser tu ou o utilizador, mostraria que o
+   resultado está certo — um teste, um validador, uma medição, alguém a usá-lo
+   a sério?
+
+Reescreve o objetivo do projeto para que peça exatamente isso e mostra-o ao
+utilizador em duas ou três frases. Tal como a escolha de tamanho da fase 0,
+vale enquanto o utilizador não se opuser. A pesquisa parte depois da
+matéria-prima da resposta 2. As quatro respostas vão para o briefing; a
+verificação externa passa ainda a fazer parte da definição de concluído.
+
+Uma resposta que acrescenta um objetivo novo em vez de elevar o padrão do
+existente é âmbito, não profundidade: vai para o anti-scope ou para a
+entrevista de decisões. Pergunta o que um profissional *faria*, nunca como
+soaria — a segunda coisa é outra vez um prompt de persona. As quatro perguntas
+são adaptadas do ensaio de Felix Rieseberg “How to be more ambitious” (2026).
 
 Descobre o que já existe, onde está a lacuna, o que é tecnicamente viável e
 que armadilhas já estão documentadas. **A pesquisa acontece só aqui.**
@@ -133,6 +163,10 @@ Mostra o plano para aprovação antes de construir.
 Trabalha contra um objetivo declarado com uma **condição de paragem
 verificável**. “Pronto quando `npm test` passa e a app abre a pasta do cofre” é
 verificável. “Pronto quando funciona bem” não é.
+
+Verificável significa que a verificação é feita por algo que não és tu: a
+verificação externa da fase 1. Reler a tua própria saída e achá-la boa é um
+modelo a dar nota a si próprio.
 
 - Teste antes da funcionalidade, onde um teste faz sentido.
 - Commits pequenos, cada um revertível por si só.

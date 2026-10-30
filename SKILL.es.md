@@ -2,7 +2,7 @@
 
 > Traducción de `SKILL.md`. **El programa lee exclusivamente `SKILL.md`**, el
 > archivo en inglés — esta versión es para que la lean personas. Si las dos se
-> contradicen, vale la inglesa. Estado: versión 1.7.0.
+> contradicen, vale la inglesa. Estado: versión 1.8.0.
 >
 > Los nombres de archivo, las carpetas y los comandos de ejemplo están sin
 > traducir a propósito, porque así se llaman en el disco.
@@ -41,7 +41,10 @@ Aplicar seis fases a un script de renombrado es la forma en que la gente
 aprende a saltarse el proceso por completo. Clasifica antes de empezar:
 
 - **S — una sentada, reversible, sin incógnitas.** Pasa directamente a hacer
-  el trabajo. Ofrece el recorrido completo solo si crece.
+  el trabajo. Ofrece el recorrido completo solo si crece. Las cuatro preguntas
+  de profundidad de la fase 1 siguen valiendo, en silencio: llevan segundos, y
+  una tarea suelta es justo aquello para lo que se hicieron. Nombra la
+  comprobación externa en tu respuesta.
 - **M — unas pocas sesiones, algunas incógnitas, una o dos bifurcaciones
   reales.** Fases 1–3 y 5, más la 6 en cuanto el trabajo sobreviva a una
   sesión. Archivo de briefing, pero corto. Sin documento de plan aparte.
@@ -52,6 +55,33 @@ Di qué tamaño elegiste y por qué, en una frase. Si el usuario no está de
 acuerdo, lo dirá — eso cuesta un mensaje y ahorra una hora.
 
 ## Fase 1 — Investigación
+
+**Antes de la primera búsqueda, haz la petición más profunda, no más grande.**
+La gente pide la versión de una tarea que ya es capaz de imaginar. Responde
+primero cuatro preguntas sobre ella:
+
+1. **Estándar.** ¿Qué haría aquí un profesional de primer nivel en este campo
+   que la petición no pide?
+2. **Materia prima.** ¿De qué partiría en lugar de algo ya digerido:
+   especificaciones, código fuente, conjuntos de datos, mediciones, las
+   personas afectadas?
+3. **Métodos y herramientas.** ¿Qué métodos y herramientas concretos, con
+   nombre propio, usaría?
+4. **Comprobación externa.** ¿Qué, aparte de ti o del usuario, demostraría que
+   el resultado es correcto: una prueba, un validador, una medición, alguien
+   que lo use de verdad?
+
+Reescribe el objetivo del proyecto para que pida exactamente eso y muéstraselo
+al usuario en dos o tres frases. Igual que la elección de tamaño de la fase 0,
+vale mientras el usuario no se oponga. La investigación arranca entonces de la
+materia prima de la respuesta 2. Las cuatro respuestas van al briefing; la
+comprobación externa pasa además a formar parte de la definición de terminado.
+
+Una respuesta que añade un objetivo nuevo en lugar de elevar el estándar del
+que ya existe es alcance, no profundidad: va al anti-alcance o a la entrevista
+de decisiones. Pregunta qué *haría* un profesional, nunca cómo sonaría uno; lo
+segundo vuelve a ser un prompt de rol. Las cuatro preguntas están adaptadas del
+ensayo de Felix Rieseberg «How to be more ambitious» (2026).
 
 Averigua qué existe ya, dónde está el hueco, qué es técnicamente viable y qué
 escollos están ya documentados. **La investigación ocurre solo aquí.**
@@ -133,6 +163,10 @@ Muestra el plan para su aprobación antes de construir.
 Trabaja contra un objetivo explícito con una **condición de parada
 comprobable**. «Hecho cuando `npm test` pasa y la app abre la carpeta de la
 bóveda» es comprobable. «Hecho cuando funciona bien» no lo es.
+
+Comprobable significa que la comprobación la hace algo distinto de ti: la
+comprobación externa de la fase 1. Releer tu propia salida y darla por buena es
+un modelo que se pone nota a sí mismo.
 
 - Prueba antes que funcionalidad, donde una prueba tenga sentido.
 - Commits pequeños, cada uno reversible por sí solo.
