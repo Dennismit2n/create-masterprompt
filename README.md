@@ -1,16 +1,18 @@
 # create-masterprompt
 
 An [Agent Skill](https://agentskills.io) that turns a vague project idea into a
-**master prompt package** — a self-contained briefing a fresh chat can run from
+**master prompt package**: a self-contained briefing a fresh chat can run from
 with zero conversation history.
 
 Works in Claude Code, claude.ai, and any client that supports the SKILL.md
 standard.
 
+<img src="docs/uebersicht-en.png" alt="One-page overview of create-masterprompt, dark: the three files it produces (BRIEFING.md, DECISIONS.md, HANDOFF_vNN.md), how it runs with the size gate, the four depth questions and the six phases from research to handoff, and the install commands." width="820">
+
 > **Status: early release.** The text has been through repeated internal
 > consistency and spec-compliance passes, but the skill itself hasn’t run on
 > many real, varied projects yet. If the size gate, the phase sequence, or a
-> template doesn’t fit how you actually work, that’s useful signal — please
+> template doesn’t fit how you actually work, that’s useful signal: please
 > open an issue.
 
 ## The problem
@@ -36,7 +38,7 @@ This skill produces three files:
 |---|---|
 | `BRIEFING.md` | Context, decisions, anti-scope, pitfalls, current status |
 | `DECISIONS.md` | One append-only entry per settled question, with the reason |
-| `HANDOFF_vNN.md` | Written before a context limit — what a fresh session needs now |
+| `HANDOFF_vNN.md` | Written before a context limit: what a fresh session needs now |
 
 A size gate first, then six phases: **research → briefing → decision interview
 → plan → build → handoff**, with a quality gate on each.
@@ -44,7 +46,7 @@ A size gate first, then six phases: **research → briefing → decision intervi
 **Fourteen languages.** `SKILL.md` is the English original and the only file
 the program reads. Every other language has a full human-readable translation
 with the same fourteen sections, and every language has a one-page overview
-image — the same fourteen the workshop’s start page speaks:
+image, the same fourteen the workshop’s start page speaks:
 
 | Language | Translation | Overview |
 |---|---|---|
@@ -64,7 +66,7 @@ image — the same fourteen the workshop’s start page speaks:
 | 한국어 | [`SKILL.ko.md`](SKILL.ko.md) | [`docs/uebersicht-ko.png`](docs/uebersicht-ko.png) |
 
 The translations carry no frontmatter, so no client mistakes them for a second
-skill definition. The skill itself stays English — it answers in whatever
+skill definition. The skill itself stays English. It answers in whatever
 language you write in.
 
 ## Install
@@ -81,7 +83,7 @@ rm -rf ~/.claude/skills/create-masterprompt/.git
 Project-scoped instead? Copy it to `.claude/skills/` or the cross-client
 `.agents/skills/` in your repo.
 
-**claude.ai** — upload `create-masterprompt.zip` from the releases page, or zip
+**claude.ai:** upload `create-masterprompt.zip` from the releases page, or zip
 the folder yourself. The archive must have the `create-masterprompt/` folder as
 its root, not the loose files, and the folder name must match the frontmatter
 `name` field exactly.
@@ -101,7 +103,7 @@ Or explicitly:
 Use create-masterprompt for this.
 ```
 
-It answers **in your language** — the skill is written in English, the output
+It answers **in your language**. The skill is written in English, the output
 is not.
 
 ## What makes it different
@@ -112,7 +114,7 @@ is not.
 | **meta-prompt-architect** | XML meta-prompts for multi-step dev | Machine-to-machine output, not human-readable files |
 | **GitHub Spec Kit / cc-sdd / Kiro** | Spec-driven development, `/specify → /plan → /tasks` | Code-only, repo-bound, needs CLI tooling, no person profile, context limits not a first-class concern |
 | **skill-creator** (Anthropic) | Builds skills | Does not build project prompts |
-| **create-masterprompt** | Project context packages | Deliberately not a code generator — it produces the prompt, not the product |
+| **create-masterprompt** | Project context packages | Deliberately not a code generator: it produces the prompt, not the product |
 
 Three things none of the others do:
 
@@ -127,17 +129,17 @@ Three things none of the others do:
 Plus **four depth questions** before any research (what a top professional
 would do here, what raw material they would start from, which methods and
 tools they would use, and what other than you or the assistant proves the
-result right — deeper, not bigger), an **improvement pass** (a silent critique
-round at every phase boundary — about 30 % extra cost, the best return in the
+result right: deeper, not bigger), an **improvement pass** (a silent critique
+round at every phase boundary, about 30 % extra cost, the best return in the
 skill), a **rewind rule** (revised decisions must update the files, not just
 the chat) and an **exit rule** (three sessions with no output means shrink,
-park, or stop — parking is a legitimate outcome, pretending is not).
+park, or stop; parking is a legitimate outcome, pretending is not).
 
 ## Make it yours
 
 `references/profile-questionnaire.md` has eleven slots. Fill them once, wrap the
 result as your own personal skill, and the method stays shared while the profile
-stays private. The questionnaire explicitly excludes sensitive personal data —
+stays private. The questionnaire explicitly excludes sensitive personal data:
 this file is going to end up in a git repo.
 
 ## Layout
@@ -145,7 +147,7 @@ this file is going to end up in a git repo.
 ```
 create-masterprompt/
 ├── SKILL.md                        # method, gates, gotchas, house rules
-├── SKILL.<lang>.md                 # 13 translations, no frontmatter — table above
+├── SKILL.<lang>.md                 # 13 translations, no frontmatter, table above
 ├── references/
 │   ├── profile-questionnaire.md    # 11 slots for a personal variant
 │   ├── quality-gates.md            # per-phase checklist
@@ -172,7 +174,7 @@ Useful contributions, roughly in order of value:
 - **Gotchas.** Environment facts that defy reasonable assumption. The highest
   value per line in the whole skill.
 - **Anti-patterns** you actually hit, with the fix that worked.
-- **Trigger eval queries**, especially strong negatives — near-misses that share
+- **Trigger eval queries**, especially strong negatives: near-misses that share
   keywords but need a different capability.
 
 Keep `SKILL.md` under 500 lines. Detail belongs in `references/`.
